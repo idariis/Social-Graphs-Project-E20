@@ -9,9 +9,11 @@ dependencies:
   - scikit-learn
   - matplotlib
   - seaborn
+  - bs4
   - tqdm
   - nltk
   - python-louvain
+  - camelot-py
   - pip
   - pip:
       - "--editable ."
