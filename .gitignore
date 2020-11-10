@@ -5,6 +5,7 @@
 .ipynb_checkpoints/twitter-checkpoint.ipynb
 
 # DotEnv configuration
+.DS_Store
 *.DS_Store
 *.env
 
