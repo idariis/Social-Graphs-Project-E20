@@ -12,9 +12,9 @@ dependencies:
   - tqdm
   - nltk
   - python-louvain
-  - dash=1.17.0
   - pip
   - pip:
+      - "--editable ."
       - tweepy
       - fa2
       - powerlaw
