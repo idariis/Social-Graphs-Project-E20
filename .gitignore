@@ -9,8 +9,11 @@
 *.env
 
 # TwitterApi
+src/tools/twitter_api.py
+
 
 # Distribution / packaging
+src/tools/__pycache__/
 .Python
 env/
 build/
@@ -27,5 +30,6 @@ var/
 *.egg-info/
 .installed.cfg
 *.egg
+
 
 
