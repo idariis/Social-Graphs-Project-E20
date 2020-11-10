@@ -1,7 +1,31 @@
-
+# VS code
+.vscode/
 .vscode/settings.json
+
 .ipynb_checkpoints/twitter-checkpoint.ipynb
-.DS_Store
-.DS_Store
-.DS_Store
+
+# DotEnv configuration
+*.DS_Store
+*.env
+
+# TwitterApi
+
+# Distribution / packaging
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
 
