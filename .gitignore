@@ -12,6 +12,8 @@
 # TwitterApi
 src/tools/twitter_api.py
 
+# Data
+Data/
 
 # Distribution / packaging
 src/tools/__pycache__/
