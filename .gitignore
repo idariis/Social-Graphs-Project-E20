@@ -13,7 +13,7 @@
 src/tools/twitter_api.py
 
 # Data
-Data/
+#Data/
 
 # Distribution / packaging
 src/tools/__pycache__/

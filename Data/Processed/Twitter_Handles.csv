@@ -1,0 +1,660 @@
+,State,Party,Type,Twitter,Name
+0,AS,R,Representative,RepTomPrice,Aumua Radewagen
+1,AZ,R,Senator,JeffFlake,Jeff Flake
+2,AZ,R,Senator,SenJonKyl,Jon Kyl
+3,CA,D,Representative,reppeteaguilar,Peter Aguilar
+4,CA,D,Representative,repcardenas,Tony Cardenas
+5,CA,R,Representative,RepJeffDenham,Jeff Denham
+6,CA,R,Representative,Rep_Hunter,Duncan Hunter
+7,CA,R,Representative,DarrellIssa,Darrell Issa
+8,CA,R,Representative,SteveKnight25,Steve Knight
+9,CA,R,Representative,DanaRohrabacher,Dana Rohrabacher
+10,CA,R,Representative,RepEdRoyce,Ed Royce
+11,CA,R,Representative,RepDavidValadao,David Valadao
+12,CA,R,Representative,RepMimiWalters,Mimi Walters
+13,CO,R,Representative,RepMikeCoffman,Mike Coffman
+14,CO,D,Representative,RepJaredPolis,Jared Polis
+15,CT,D,Representative,RepEsty,Elizabeth Esty
+16,DE,D,Senator,ChrisCoons,Christopher Coons
+17,FL,D,Representative,repcharliecrist,Charles Crist
+18,FL,R,Representative,RepCurbelo,Carlos Curbelo
+19,FL,R,Representative,TomRooney,Tom Rooney
+20,FL,R,Representative,RosLehtinen,Ileana Ros-Lehtinen
+21,FL,R,Representative,RepDennisRoss,Dennis Ross
+22,FL,D,Senator,SenBillNelson,Bill Nelson
+23,GA,D,Representative,sanfordbishop,Sanford Bishop
+24,GA,R,Representative,RepKHandel,Karen Handel
+25,GA,R,Senator,SenatorIsakson,Johnny Isakson
+26,GU,D,Representative,n/a,Madeleine Bordallo
+27,HI,D,Representative,ColleenHanabusa,Colleen Hanabusa
+28,IA,R,Representative,RepRodBlum,Rodney Blum
+29,IA,R,Representative,RepDavidYoung,David Young
+30,ID,R,Representative,Raul_Labrador,Raul Labrador
+31,IL,D,Representative,RepGutierrez,Luis Gutierrez
+32,IL,R,Representative,RepHultgren,Randy Hultgren
+33,IL,R,Representative,PeterRoskam,Peter Roskam
+34,IN,D,Representative,repandrecarson,Andre Carson
+35,IN,R,Representative,RepLukeMesser,Luke Messer
+36,IN,R,Representative,ToddRokita,Todd Rokita
+37,IN,D,Senator,SenDonnelly,Joe Donnelly
+38,KS,R,Representative,RepLynnJenkins,Lynn Jenkins
+39,KS,R,Representative,RepKevinYoder,Kevin Yoder
+40,MA,D,Representative,RepMikeCapuano,Michael Capuano
+41,MA,D,Representative,nikiinthehouse,Niki Tsongas
+42,MD,D,Representative,RepCummings,Elijah Cummings
+43,MD,D,Representative,RepJohnDelaney,John Delaney
+44,MD,D,Representative,WhipHoyer,Steny Hoyer
+45,ME,R,Representative,RepPoliquin,Bruce Poliquin
+46,MI,R,Representative,RepJackBergman,John Bergman
+47,MI,R,Representative,repmikebishop,Michael Bishop
+48,MI,D,Representative,repsandylevin,Sandy Levin
+49,MI,R,Representative,repdavetrott,David Trott
+50,MN,D,Representative,keithellison,Keith Ellison
+51,MN,R,Representative,Jason2CD,Jason Lewis
+52,MN,D,Representative,USRepRickNolan,Rick Nolan
+53,MN,R,Representative,RepErikPaulsen,Erik Paulsen
+54,MN,D,Representative,RepTimWalz,Tim Walz
+55,MO,D,Representative,lacyclaymo1,Lacy Clay
+56,MO,D,Senator,ClairecMc,Claire McCaskill
+57,MS,R,Representative,GreggHarper,Gregg Harper
+58,NC,R,Representative,RepWalterJones,Walter Jones
+59,NC,R,Representative,RepMarkMeadows,Mark Meadows
+60,NC,R,Representative,reppittenger,Robert Pittenger
+61,ND,D,Senator,SenatorHeitkamp,Heidi Heitkamp
+62,NH,D,Representative,RepSheaPorter,Carol Shea-Porter
+63,NJ,R,Representative,USRepRodney,Rodney Frelinghuysen
+64,NJ,R,Representative,RepLanceNJ7,Leonard Lance
+65,NJ,R,Representative,RepLoBiondo,Frank LoBiondo
+66,NJ,R,Representative,RepTomMacArthur,Thomas MacArthur
+67,NJ,D,Representative,RepBWColeman,"Bonnie Watson 
+Coleman"
+68,NM,D,Representative,RepLujanGrisham,Michelle Lujan Grisham
+69,NM,R,Representative,RepStevePearce,Steve Pearce
+70,NV,D,Representative,RubenKihuen,Ruben Kihuen
+71,NV,D,Representative,RosenforNevada,Jacklyn Rosen
+72,NV,D,Senator,sencortezmasto,Catherine Cortez Masto
+73,NV,R,Senator,SenDeanHeller,Dean Heller
+74,NY,D,Representative,YvetteClarke,Yvette Clarke
+75,NY,R,Representative,RepChrisCollins,Chris Collins
+76,NY,D,Representative,repjoecrowley,Joseph Crowley
+77,NY,R,Representative,RepDanDonovan,Daniel Donovan
+78,NY,R,Representative,JohnFasoNY,John Faso
+79,NY,D,Representative,GregoryMeeks,Gregory Meeks
+80,NY,R,Representative,ClaudiaTenney,Claudia Tenney
+81,OH,R,Representative,RepJimRenacci,Jim Renacci
+82,OK,R,Representative,RepRussell,Steve Russell
+83,OK,R,Senator,JimInhofe,James Inhofe
+84,PA,R,Representative,reploubarletta,Lou Barletta
+85,PA,D,Representative,RepBrady,Robert Brady
+86,PA,R,Representative,RepRyanCostello,Ryan Costello
+87,PA,R,Representative,RepFitzpatrick,Brian Fitzpatrick
+88,PA,R,Representative,RepTomMarino,Tom Marino
+89,PA,R,Representative,KeithRothfus,Keith Rothfus
+90,PA,R,Representative,RepBillShuster,Bill Shuster
+91,SC,D,Representative,Clyburn,James Clyburn
+92,SC,R,Representative,TGowdySC,Trey Gowdy
+93,SC,R,Representative,RepSanfordSC,Mark Sanford
+94,SD,R,Representative,RepKristiNoem,Kristi Noem
+95,TN,R,Representative,RepDianeBlack,Diane Black
+96,TN,R,Representative,RepJohnDuncanJr,John Duncan
+97,TN,R,Senator,SenBobCorker,Bob Corker
+98,TX,R,Representative,RepJoeBarton,Joe Barton
+99,TX,R,Representative,CongCulberson,John Culberson
+100,TX,D,Representative,VoteVincente,Vicente Gonzalez
+101,TX,D,Representative,RepGeneGreen,Gene Green
+102,TX,R,Representative,RepHensarling,Jeb Hensarling
+103,TX,R,Representative,SamsPressShop,Sam Johnson
+104,TX,D,Representative,RepBetoORourke,Beto O'Rourke
+105,TX,R,Representative,JudgeTedPoe,Ted Poe
+106,TX,R,Representative,PeteSessions,Pete Sessions
+107,TX,R,Representative,LamarSmithTX21,Lamar Smith
+108,UT,R,Representative,RepRobBishop,Rob Bishop
+109,UT,R,Representative,RepMiaLove,Mia Love
+110,UT,R,Senator,SenOrrinHatch,Orrin Hatch
+111,VA,R,Representative,RepDaveBrat,Dave Brat
+112,VA,R,Representative,RepComstock,Barbara Comstock
+113,VA,R,Representative,GarrettforVA,Thomas Garrett
+114,VA,R,Representative,RepGoodlatte,Bob Goodlatte
+115,VA,D,Representative,repbobbyscott,Bobby Scott
+116,VA,R,Representative,ScotttaylorVA,Scott Taylor
+117,WA,R,Representative,davereichert,Dave Reichert
+118,WI,R,Representative,RepSeanDuffy,Sean Duffy
+119,WI,R,Representative,RepPaulRyan,Paul Ryan
+120,WV,R,Representative,RepEvanJenkins,Evan Jenkins
+121,AL,R,Senator,SenShelby,Richard Shelby
+122,AL,D,Senator,DougJones,Doug Jones
+123,AL,R,Representative,RepByrne,Bradley Byrne
+124,AL,R,Representative,RepMarthaRoby,Martha Roby
+125,AL,R,Representative,RepMikeRogersAL,Mike Rogers
+126,AL,R,Representative,Robert_Aderholt,Robert Aderholt
+127,AL,R,Representative,RepMoBrooks,Mo Brooks
+128,AL,R,Representative,USRepGaryPalmer,Gary Palmer
+129,AL,D,Representative,RepTerriSewell,Terri A. Sewell
+130,AK,R,Senator,SenDanSullivan,Dan Sullivan
+131,AK,R,Senator,lisamurkowski,Lisa Murkowski
+132,AK,R,Representative,RepDonYoung,Don Young
+133,AS,R,Representative,RepAmata,Amata Radewagen
+134,AZ,R,Senator,SenMcSallyAZ,Martha McSally
+135,AZ,D,Senator,SenatorSinema,Kyrsten Sinema
+136,AZ,D,Representative,TomOHalleran,Tom O'Halleran
+137,AZ,D,Representative,RepKirkPatrick,Ann Kirkpatrick
+138,AZ,D,Representative,RepRaulGrijalva,Raul Grijalva
+139,AZ,R,Representative,RepGosar,Paul A. Gosar
+140,AZ,R,Representative,AndyBiggs4AZ,Andy Biggs
+141,AZ,R,Representative,RepDavid,David Schweikert
+142,AZ,D,Representative,RepRubenGallego,Ruben Gallego
+143,AZ,R,Representative,RepDLesko,Debbie Lesko
+144,AZ,D,Representative,RepGregStanton,Greg Stanton
+145,AR,R,Senator,SenTomCotton,Tom Cotton
+146,AR,R,Senator,JohnBoozman,John Boozman
+147,AR,R,Representative,RepRickCrawford,Rick Crawford
+148,AR,R,Representative,RepFrenchHill,French Hill
+149,AR,R,Representative,rep_stevewomack,Steve Womack
+150,AR,R,Representative,RepWesterman,Bruce Westerman
+151,CA,D,Senator,SenFeinstein,Dianne Feinstein
+152,CA,D,Senator,KamalaHarris,Kamala Harris
+153,CA,R,Representative,RepLaMalfa,Doug LaMalfa
+154,CA,D,Representative,RepHuffman,Jared Huffman
+155,CA,D,Representative,RepGaramendi,John Garamendi
+156,CA,R,Representative,RepMcClintock,Tom McClintock
+157,CA,D,Representative,RepThompson,Mike Thompson
+158,CA,D,Representative,DorisMatsui,Doris O. Matsui
+159,CA,D,Representative,RepBera,Ami Bera
+160,CA,R,Representative,RepPaulCook,Paul Cook
+161,CA,D,Representative,RepMcNerney,Jerry McNerney
+162,CA,D,Representative,RepJoshHarder,Josh Harder
+163,CA,D,Representative,RepDeSaulnier,Mark DeSaulnier
+164,CA,D,Representative,SpeakerPelosi,Nancy Pelosi
+165,CA,D,Representative,RepBarbaraLee,Barbara Lee
+166,CA,D,Representative,RepSpeier,Jackie Speier
+167,CA,D,Representative,RepSwalwell,Eric Swalwell
+168,CA,D,Representative,RepJimCosta,Jim Costa
+169,CA,D,Representative,RoKhannaUSA,Ro Khanna
+170,CA,D,Representative,RepAnnaEshoo,Anna G. Eshoo
+171,CA,D,Representative,RepZoeLofgren,Zoe Lofgren
+172,CA,D,Representative,JimmyPanetta,Jimmy Panetta
+173,CA,D,Representative,RepTJCox,TJ Cox
+174,CA,R,Representative,DevinNunes,Devin Nunes
+175,CA,R,Representative,GOPLeader,Kevin McCarthy
+176,CA,D,Representative,CarbajalSalud,Salud Carbajal
+177,CA,R,Representative,MikeGarcia2020,Mike Garcia
+178,CA,D,Representative,RepBrownley,Julia Brownley
+179,CA,D,Representative,RepJudyChu,Judy Chu
+180,CA,D,Representative,RepAdamSchiff,Adam Schiff
+181,CA,D,Representative,RepCardenas,Tony Cárdenas
+182,CA,D,Representative,BradSherman,Brad Sherman
+183,CA,D,Representative,RepPeteAguilar,Pete Aguilar
+184,CA,D,Representative,gracenapolitano,Grace Napolitano
+185,CA,D,Representative,RepTedLieu,Ted Lieu
+186,CA,D,Representative,RepJimmyGomez,Jimmy Gomez
+187,CA,D,Representative,NormaJTorres,Norma Torres
+188,CA,D,Representative,RepRaulRuizMD,Raul Ruiz
+189,CA,D,Representative,RepKarenBass,Karen Bass
+190,CA,D,Representative,RepLindaSanchez,Linda Sánchez
+191,CA,D,Representative,RepGilCisneros,Gilbert Ray Jr. Cisneros
+192,CA,D,Representative,RepRoybalAllard,Lucille Roybal-Allard
+193,CA,D,Representative,RepMarkTakano,Mark Takano
+194,CA,R,Representative,KenCalvert,Ken Calvert
+195,CA,D,Representative,MaxineWaters,Maxine Waters
+196,CA,D,Representative,Nanette4CA,Nanette Barragan
+197,CA,D,Representative,RepKatiePorter,Katie Porter
+198,CA,D,Representative,RepLouCorrea,Lou Correa
+199,CA,D,Representative,RepLowenthal,Alan Lowenthal
+200,CA,D,Representative,RepHarley,Harley Rouda
+201,CA,D,Representative,RepMikeLevin,Mike Levin
+202,CA,D,Representative,RepJuanVargas,Juan Vargas
+203,CA,D,Representative,RepScottPeters,Scott Peters
+204,CA,D,Representative,RepSusanDavis,Susan Davis
+205,CO,D,Senator,MichaelBennet,Michael Bennet
+206,CO,R,Senator,SenCoryGardner,Cory Gardner
+207,CO,D,Representative,RepDianaDeGette,Diana DeGette
+208,CO,R,Representative,RepJoeNeguse,Joe Neguse
+209,CO,R,Representative,RepTipton,Scott Tipton
+210,CO,R,Representative,RepKenBuck,Ken Buck
+211,CO,R,Representative,RepDLamborn,Doug Lamborn
+212,CO,D,Representative,RepJasonCrow,Jason Crow
+213,CO,D,Representative,RepPerlmutter,Ed Perlmutter
+214,CT,D,Senator,ChrisMurphyCT,Chris Murphy
+215,CT,D,Senator,SenBlumenthal,Richard Blumenthal
+216,CT,D,Representative,RepJohnLarson,John B. Larson
+217,CT,D,Representative,RepJoeCourtney,Joe Courtney
+218,CT,D,Representative,rosadelauro,Rosa L. DeLauro
+219,CT,D,Representative,jahimes,Jim Himes
+220,CT,D,Representative,RepJahanaHayes,Jahana Hayes
+221,DE,D,Senator,SenCoonsOffice,Chris Coons
+222,DE,D,Senator,SenatorCarper,Tom Carper
+223,DE,D,Representative,LisaBRochester,Lisa Blunt Rochester
+224,DC,D,Representative,EleanorNorton,Eleanor Holmes Norton
+225,FL,R,Senator,marcorubio,Marco Rubio
+226,FL,R,Senator,ScottforFL,Rick Scott
+227,FL,R,Representative,MattGaetz,Matt Gaetz
+228,FL,R,Representative,DrNealDunnFL2,Neal Dunn
+229,FL,R,Representative,RepTedYoho,Ted Yoho
+230,FL,R,Representative,JRutherfordFL,John Rutherford
+231,FL,D,Representative,AlLawsonJr,Al Lawson
+232,FL,R,Representative,RepMichaelWaltz,Michael Waltz
+233,FL,D,Representative,SMurphyCongress,Stephanie Murphy
+234,FL,R,Representative,congbillposey,Bill Posey
+235,FL,D,Representative,RepDarrenSoto,Darren Soto
+236,FL,D,Representative,Val_Demings,Val Demings
+237,FL,R,Representative,RepWebster,Daniel Webster
+238,FL,R,Representative,RepGusBilirakis,Gus M. Bilirakis
+239,FL,D,Representative,CharlieCrist,Charlie Crist
+240,FL,D,Representative,USRepKCastor,Kathy Castor
+241,FL,R,Representative,RepRossSpano,Ross Spano
+242,FL,R,Representative,VernBuchanan,Vern Buchanan
+243,FL,R,Representative,RepGregSteube,W. Gregory Steube
+244,FL,R,Representative,BrianMastFL,Brian Mast
+245,FL,R,Representative,FrancisRooney,Francis Rooney
+246,FL,D,Representative,RepHastingsFL,Alcee L. Hastings
+247,FL,D,Representative,RepLoisFrankel,Lois Frankel
+248,FL,D,Representative,RepTedDeutch,Ted Deutch
+249,FL,D,Representative,RepDWStweets,Debbie Wasserman Schultz
+250,FL,D,Representative,RepWilson,Frederica Wilson
+251,FL,R,Representative,MarioDB,Mario Diaz-Balart
+252,FL,D,Representative,RepDMP,Debbie Mucarsel-Powell
+253,FL,D,Representative,RepShalala,Donna E. Shalala
+254,GA,R,Senator,sendavidperdue,David Perdue
+255,GA,R,Senator,SenatorLoeffler,Kelly Loeffler
+256,GA,R,Representative,RepBuddyCarter,Buddy Carter
+257,GA,D,Representative,SanfordBishop,Sanford D. Bishop Jr.
+258,GA,R,Representative,DrewFergusonGA,Drew Ferguson
+259,GA,D,Representative,RepHankJohnson,Henry C. “Hank” Jr. Johnson
+260,GA,D,Representative,repjohnlewis,John Lewis
+261,GA,D,Representative,RepLucyMcBath,Lucy McBath
+262,GA,R,Representative,RepRobWoodall,Robert Woodall
+263,GA,R,Representative,AustinScottGA08,Austin Scott
+264,GA,R,Representative,RepDougCollins,Doug Collins
+265,GA,R,Representative,CongressmanHice,Jody Hice
+266,GA,R,Representative,RepLoudermilk,Barry Loudermilk
+267,GA,R,Representative,RepRickAllen,Rick Allen
+268,GA,D,Representative,repdavidscott,David Scott
+269,GA,R,Representative,RepTomGraves,Tom Graves
+270,GU,D,Representative,GU,Michael F.Q. San Nicolas
+271,HI,D,Senator,SenBrianSchatz,Brian Schatz
+272,HI,D,Senator,maziehirono,Mazie Hirono
+273,HI,D,Representative,RepEdCase,Ed Case
+274,HI,D,Representative,TulsiPress,Tulsi Gabbard
+275,ID,R,Senator,SenatorRisch,Jim Risch
+276,ID,R,Senator,MikeCrapo,Mike Crapo
+277,ID,R,Representative,RepRussFulcher,Russ Fulcher
+278,ID,R,Representative,CongMikeSimpson,Mike Simpson
+279,IL,D,Senator,SenDuckworth,Tammy Duckwort
+280,IL,D,Senator,SenatorDurbin,Richard Durbin
+281,IL,D,Representative,RepBobbyRush,Bobby L. Rush
+282,IL,D,Representative,RepRobinKelly,Robin Kelly
+283,IL,D,Representative,RepLipinski,Daniel Lipinski
+284,IL,D,Representative,RepChuyGarcia,Jesus “Chuy” Garcia
+285,IL,D,Representative,RepMikeQuigley,Mike Quigley
+286,IL,D,Representative,RepCasten,Sean Casten
+287,IL,D,Representative,RepDannyDavis,Danny K. Davis
+288,IL,D,Representative,RajaForCongress,Raja Krishnamoorthi
+289,IL,D,Representative,janschakowsky,Jan Schakowsky
+290,IL,D,Representative,RepSchneider,Bradley Schneider
+291,IL,D,Representative,RepBillFoster,Bill Foster
+292,IL,R,Representative,RepBost,Mike Bost
+293,IL,R,Representative,RodneyDavis,Rodney Davis
+294,IL,D,Representative,RepUnderwood,Lauren Underwood
+295,IL,R,Representative,RepShimkus,John Shimkus
+296,IL,R,Representative,RepKinzinger,Adam Kinzinger
+297,IL,D,Representative,RepCheri,Cheri Bustos
+298,IL,R,Representative,ElectLaHood,arin LaHood
+299,IN,R,Senator,Braun4IN,Mike Braun
+300,IN,R,Senator,SenToddYoung,Todd Young
+301,IN,D,Representative,RepVisclosky,Peter Visclosky
+302,IN,R,Representative,RepWalorski,Jackie Walorski
+303,IN,R,Representative,Jim_Banks,Jim Banks
+304,IN,R,Representative,RepJimBaird,James Baird
+305,IN,R,Representative,SusanWBrooks,Susan W. Brooks
+306,IN,R,Representative,RepGregPence,Greg Pence
+307,IN,D,Representative,RepAndreCarson,André Carson
+308,IN,R,Representative,RepLarryBucshon,Larry Bucshon
+309,IN,R,Representative,VoteForTrey,Trey Hollingsworth
+310,IA,R,Senator,ChuckGrassley,Chuck Grassley
+311,IA,R,Senator,SenJoniErnst,Joni Ernst
+312,IA,D,Representative,RepFinkenauer,Abby Finkenauer
+313,IA,D,Representative,daveloebsack,David Loebsack
+314,IA,D,Representative,RepCindyAxne,Cynthia Axne
+315,IA,R,Representative,SteveKingIA,Steve King
+316,KS,R,Senator,SenPatRoberts,Pat Roberts
+317,KS,R,Senator,JerryMoran,Jerry Moran
+318,KS,R,Representative,RogerMarshallMD,Roger Marshall
+319,KS,R,Representative,Rep_Watkins,Steve Watkins
+320,KS,D,Representative,RepDavids,Sharice Davids
+321,KS,R,Representative,RepRonEstes,Ron Estes
+322,KY,R,Senator,RandPaul,Rand Paul
+323,KY,R,Senator,McConnellPress,Mitch McConnell
+324,KY,R,Representative,JamesComer,James Comer
+325,KY,R,Representative,RepGuthrie,S. Brett Guthrie
+326,KY,D,Representative,RepJohnYarmuth,John A. Yarmuth
+327,KY,R,Representative,RepThomasMassie,Thomas Massie
+328,KY,R,Representative,RepHalRogers,Harold Rogers
+329,KY,R,Representative,RepAndyBarr,Andy Barr
+330,LA,R,Senator,JohnKennedyLA,John Kennedy
+331,LA,R,Senator,BillCassidy,Bill Cassidy
+332,LA,R,Representative,SteveScalise,Steve Scalise
+333,LA,D,Representative,RepRichmond,Cedric Richmond
+334,LA,R,Representative,CaptClayHIggins,Clay Higgins
+335,LA,R,Representative,RepMikeJohnson,Mike Johnson
+336,LA,R,Representative,RepAbraham,Ralph Abraham
+337,LA,R,Representative,RepGarretGraves,Garret Graves
+338,ME,I,Senator,SenAngusKing,Angus King
+339,ME,R,Senator,SenatorCollins,Susan Collins
+340,ME,D,Representative,chelliepingree,Chellie Pingree
+341,ME,D,Representative,RepGolden,Jared Golden
+342,MD,D,Senator,ChrisVanHollen,Chris Van Hollen
+343,MD,D,Senator,SenatorCardin,Benjamin Cardin
+344,MD,R,Representative,RepAndyHarrisMD,Andy Harris
+345,MD,D,Representative,Call_Me_Dutch,C. A. Dutch Ruppersberger
+346,MD,D,Representative,RepSarbanes,John P. Sarbanes
+347,MD,D,Representative,RepAnthonyBrown,Anthony Brown
+348,MD,D,Representative,LeaderHoyer,Steny H. Hoyer
+349,MD,D,Representative,RepDavidTrone,David Trone
+350,MD,D,Representative,Mfume4Congress,Kweisi Mfume
+351,MD,D,Representative,Jamie_Raskin,Jamie Raskin
+352,MA,D,Senator,SenWarren,Elizabeth Warren
+353,MA,D,Senator,SenMarkey,Edward Markey
+354,MA,D,Representative,RepRichardNeal,Richard E. Neal
+355,MA,D,Representative,RepMcGovern,James McGovern
+356,MA,D,Representative,RepLoriTrahan,Lori Trahan
+357,MA,D,Representative,RepJoeKennedy,Joseph P. Kennedy III
+358,MA,D,Representative,RepKClark,Katherine Clark
+359,MA,D,Representative,teammoulton,Seth Moulton
+360,MA,D,Representative,RepPressley,Ayanna Pressley
+361,MA,D,Representative,RepStephenLynch,Stephen F. Lynch
+362,MA,D,Representative,USRepKeating,William Keating
+363,MI,D,Senator,SenStabenow,Debbie Stabenow
+364,MI,D,Senator,SenGaryPeters,Gary Peters
+365,MI,R,Representative,JackBergman_MI1,Jack Bergman
+366,MI,R,Representative,RepHuizenga,Bill Huizenga
+367,MI,L,Representative,justinamash,Justin Amash
+368,MI,R,Representative,RepMoolenaar,John Moolenaar
+369,MI,D,Representative,RepDanKildee,Daniel Kildee
+370,MI,R,Representative,RepFredUpton,Fred Upton
+371,MI,R,Representative,RepWalberg,Tim Walberg
+372,MI,D,Representative,RepSlotkin,Elissa Slotkin
+373,MI,D,Representative,RepAndyLevin,Andy Levin
+374,MI,R,Representative,PaulMitchell4us,Paul Mitchell
+375,MI,D,Representative,RepHaleyStevens,Haley Stevens
+376,MI,D,Representative,RepDebDingell,Debbie Dingell
+377,MI,D,Representative,RepRashida,Rashida Tlaib
+378,MI,D,Representative,RepLawrence,Brenda Lawrence
+379,MN,D,Senator,amyklobuchar,Amy Klobuchar
+380,MN,D,Senator,SenTinaSmith,Tina Smith
+381,MN,R,Representative,RepHagedorn,Jim Hagedorn
+382,MN,D,Representative,RepAngieCraig,Angie Craig
+383,MN,D,Representative,RepDeanPhillips,Dean Phillips
+384,MN,D,Representative,BettyMcCollum04,Betty McCollum
+385,MN,D,Representative,IlhanMN,Ilhan Omar
+386,MN,R,Representative,RepTomEmmer,Tom Emmer
+387,MN,D,Representative,collinpeterson,Collin C. Peterson
+388,MN,R,Representative,RepPeteStauber,Pete Stauber
+389,MS,R,Senator,SenatorWicker,Roger Wicker
+390,MS,R,Senator,SenHydeSmith,Cindy Hyde-Smith
+391,MS,R,Representative,RepTrentKelly,Trent Kelly
+392,MS,D,Representative,BennieGThompson,Bennie G. Thompson
+393,MS,R,Representative,RepMichaelGuest,Michael Guest
+394,MS,R,Representative,CongPalazzo,Steven Palazzo
+395,MO,R,Senator,HawleyMO,Josh Hawley
+396,MO,R,Senator,RoyBlunt,Roy Blunt
+397,MO,D,Representative,LacyClayMO1,William “Lacy” Clay Jr.
+398,MO,R,Representative,RepAnnWagner,Ann Wagner
+399,MO,R,Representative,RepBlaine,Blaine Luetkemeyer
+400,MO,R,Representative,RepHartzler,Vicky Hartzler
+401,MO,D,Representative,repcleaver,Emanuel Cleaver
+402,MO,R,Representative,RepSamGraves,Sam Graves
+403,MO,R,Representative,USRepLong,Billy Long
+404,MO,R,Representative,RepJasonSmith,Jason Smith
+405,MT,D,Senator,SenatorTester,Jon Tester
+406,MT,R,Senator,SteveDaines,Steve Daines
+407,MT,R,Representative,GregForMT,Greg Gianforte
+408,NE,R,Senator,SenSasse,Ben Sasse
+409,NE,R,Senator,SenatorFischer,Deb Fischer
+410,NE,R,Representative,JeffFortenberry,Jeff Fortenberry
+411,NE,R,Representative,RepDonBacon,Don Bacon
+412,NE,R,Representative,RepAdrianSmith,Adrian Smith
+413,NV,D,Senator,SenJackyRosen,Jacky Rosen
+414,NV,D,Senator,CatherineForNV,Catherine Cortez Mastro
+415,NV,D,Representative,repdinatitus,Dina Titus
+416,NV,R,Representative,MarkAmodeiNV2,Mark Amodei
+417,NV,D,Representative,RepSusieLee,Susie Lee
+418,NV,D,Representative,RepHorsford,Steven Horsford
+419,NH,D,Senator,SenatorShaheen,Jeanne Shaheen
+420,NH,D,Senator,Maggie_Hassan,Maggie Hassan
+421,NH,D,Representative,RepChrisPappas,Chris Pappas
+422,NH,D,Representative,RepAnnieKuster,Ann Kuster
+423,NJ,D,Senator,SenatorMenendez,Robert Menendez
+424,NJ,D,Senator,CoryBooker,Cory Booker
+425,NJ,D,Representative,DonNorcross4NJ,Donald Norcross
+426,NJ,D,Representative,JeffVanDrew,Jefferson Van Drew
+427,NJ,D,Representative,RepAndyKimNJ,Andy Kim
+428,NJ,R,Representative,RepChrisSmith,Chris Smith
+429,NJ,D,Representative,JoshGottheimer,Josh Gottheimer
+430,NJ,D,Representative,FrankPallone,Frank Pallone Jr.
+431,NJ,D,Representative,RepMalinowski,Tom Malinowski
+432,NJ,D,Representative,RepSires,Albio Sires
+433,NJ,D,Representative,BillPascrell,Bill Pascrell Jr.
+434,NJ,D,Representative,RepDonaldPayne,Donald Payne Jr.
+435,NJ,D,Representative,RepSherrill,Mikie Sherrill
+436,NJ,D,Representative,RepBonnie,Bonnie Watson Coleman
+437,NM,D,Senator,SenatorTomUdall,Tom Udall
+438,NM,D,Senator,MartinHeinrich,Martin Heinrich
+439,NM,D,Representative,RepDebHaaland,Debra Haaland
+440,NM,D,Representative,RepTorresSmall,Xochiti Torres Small
+441,NM,D,Representative,repbenraylujan,Ben R. Lujan
+442,NY,D,Senator,SenSchumer,Chuck Schumer
+443,NY,D,Senator,SenGillibrand,Kirsten Gillibrand
+444,NY,R,Representative,RepLeeZeldin,Lee Zeldin
+445,NY,R,Representative,RepPeteKing,Pete King
+446,NY,D,Representative,Tom_Suozzi,Tom Suozzi
+447,NY,D,Representative,RepKathleenRice,Kathleen Rice
+448,NY,D,Representative,RepGregoryMeeks,Gregory W. Meeks
+449,NY,D,Representative,RepGraceMeng,Grace Meng
+450,NY,D,Representative,NydiaVelazquez,Nydia M. Velázquez
+451,NY,D,Representative,RepJeffries,Hakeem Jeffries
+452,NY,D,Representative,RepYvetteClarke,Yvette D. Clarke
+453,NY,D,Representative,RepJerryNadler,Jerrold Nadler
+454,NY,D,Representative,RepMaxRose,Max Rose
+455,NY,D,Representative,RepMaloney,Carolyn Maloney
+456,NY,D,Representative,EspaillatNY,Adriano Espaillat
+457,NY,D,Representative,RepAOC,Alexandria Ocasio-Cortez
+458,NY,D,Representative,RepJoseSerrano,José E. Serrano
+459,NY,D,Representative,RepEliotEngel,Eliot Engel
+460,NY,D,Representative,NitaLowey,Nita Lowey
+461,NY,D,Representative,RepSeanMaloney,Sean Patrick Maloney
+462,NY,D,Representative,RepDelgado,Antonio Delgado
+463,NY,D,Representative,RepPaulTonko,Paul D. Tonko
+464,NY,R,Representative,RepStefanik,Elise Stefanik
+465,NY,D,Representative,RepBrindisi,Anthony Brindisi
+466,NY,R,Representative,RepTomReed,Tom Reed
+467,NY,R,Representative,RepJohnKatko,John Katko
+468,NY,D,Representative,RepJoeMorelle,Joseph Morelle
+469,NY,D,Representative,RepBrianHiggins,Brian Higgins
+470,NC,R,Senator,SenThomTillis,Thom Tillis
+471,NC,R,Senator,SenatorBurr,Richard Burr
+472,NC,D,Representative,GKButterfield,G.K. Butterfield
+473,NC,R,Representative,GeorgeHolding,George Holding
+474,NC,R,Representative,RepGregMurphy,Greg Murphy
+475,NC,D,Representative,RepDavidEPrice,David Price
+476,NC,R,Representative,virginiafoxx,VA Foxx
+477,NC,R,Representative,RepMarkWalker,Mark Walker
+478,NC,R,Representative,RepDavidRouzer,David Rouzer
+479,NC,R,Representative,RepRichHudson,Richard Hudson
+480,NC,R,Representative,jdanbishop,Dan Bishop
+481,NC,R,Representative,PatrickMcHenry,Patrick T. McHenry
+482,NC,D,Representative,RepAdams,Alma Adams
+483,NC,R,Representative,BuddforCongress,Ted Budd
+484,ND,R,Senator,SenJohnHoeven,John Hoeven
+485,ND,R,Senator,SenKevinCramer,Kevin Cramer
+486,ND,R,Representative,RepArmstrongND,Kelly Armstrong
+487,MP,D,Representative,Kilili_Sablan,Gregorio Sablan
+488,OH,R,Senator,senrobportman,Rob Portman
+489,OH,D,Senator,SenSherrodBrown,Sherrod Brown
+490,OH,R,Representative,RepSteveChabot,Steve Chabot
+491,OH,R,Representative,RepBradWenstrup,Brad Wenstrup
+492,OH,D,Representative,RepBeatty,Joyce Beatty
+493,OH,R,Representative,Jim_Jordan,Jim Jordan
+494,OH,R,Representative,boblatta,Robert E. Latta
+495,OH,R,Representative,RepBillJohnson,Bill Johnson
+496,OH,R,Representative,RepBobGibbs,Bob Gibbs
+497,OH,R,Representative,WarrenDavidson,Warren Davidson
+498,OH,D,Representative,RepMarcyKaptur,Marcy Kaptur
+499,OH,R,Representative,RepMikeTurner,Michael Turner
+500,OH,D,Representative,RepMarciaFudge,Marcia L. Fudge
+501,OH,R,Representative,RepBalderson,Troy Balderson
+502,OH,D,Representative,RepTimRyan,Tim Ryan
+503,OH,R,Representative,RepDaveJoyce,David Joyce
+504,OH,R,Representative,RepSteveStivers,Steve Stivers
+505,OH,R,Representative,RepAGonzalez,Anthony Gonzalez
+506,OK,R,Senator,SenatorLankford,James Lankford
+507,OK,R,Senator,InhofePress,Jim Inhofe
+508,OK,R,Representative,RepKevinHern,Kevin Hern
+509,OK,R,Representative,RepMullin,Markwayne Mullin
+510,OK,R,Representative,RepFrankLucas,Frank Lucas
+511,OK,R,Representative,TomColeOK04,Tom Cole
+512,OK,D,Representative,RepKendraHorn,Kendra Horn
+513,OR,D,Senator,RonWyden,Ron Wyden
+514,OR,D,Senator,SenJeffMerkley,Jeff Merkley
+515,OR,D,Representative,RepBonamici,Suzanne Bonamici
+516,OR,R,Representative,repgregwalden,Greg Walden
+517,OR,D,Representative,repblumenauer,Earl Blumenauer
+518,OR,D,Representative,RepPeterDeFazio,Peter DeFazio
+519,OR,D,Representative,RepSchrader,Kurt Schrader
+520,PR,R,Representative,Jenniffer2012,Jenniffer Gonzalez-Colon
+521,PA,R,Senator,SenToomey,Patrick Toomey
+522,PA,D,Senator,SenBobCasey,Bob Jr. Casey
+523,PA,R,Representative,RepBrianFitz,Brady Fitzpatrick
+524,PA,D,Representative,CongBoyle,Brendan Boyle
+525,PA,D,Representative,RepDwightEvans,Dwight Evans
+526,PA,D,Representative,RepDean,Madeleine Dean
+527,PA,D,Representative,RepMGS,Mary-Gay Scanlon
+528,PA,D,Representative,RepHoulahan,Chrissy Houlahan
+529,PA,D,Representative,RepSusanWild,Susan Wild
+530,PA,D,Representative,RepCartwright,Matt Cartwright
+531,PA,R,Representative,RepMeuser,Daniel Meuser
+532,PA,R,Representative,RepScottPerry,Scott Perry
+533,PA,R,Representative,RepLloyd,Lloyd Smucker
+534,PA,R,Representative,RepFredKelle,Fred Keller
+535,PA,R,Representative,RepJohnJoyce,John Joyce
+536,PA,R,Representative,GReschenthaler,Guy Reschenthaler
+537,PA,R,Representative,CongressmanGT,Glenn Thompson
+538,PA,R,Representative,MikeKellyforPA,Mike Kelly
+539,PA,D,Representative,RepConorLamb,Conor Lamb
+540,PA,D,Representative,USRepMikeDoyle,Michael Doyle
+541,RI,D,Senator,SenWhitehouse,Sheldon Whitehouse
+542,RI,D,Senator,SenJackReed,Jack Reed
+543,RI,D,Representative,RepCicilline,David Cicilline
+544,RI,D,Representative,jimlangevin,Jim Langevin
+545,SC,R,Senator,SenatorTimScott,Tim Scott
+546,SC,R,Senator,LindsayGrahamSC,Lindsey Graham
+547,SC,D,Representative,RepCunningham,Joe Cunningham
+548,SC,R,Representative,RepJoeWilson,Joe Wilson
+549,SC,R,Representative,RepJeffDuncan,Jeff Duncan
+550,SC,R,Representative,RepTimmons,William Timmons
+551,SC,R,Representative,RepRalphNorman,Ralph Norman
+552,SC,D,Representative,WhipClyburn,James E. Clyburn
+553,SC,R,Representative,RepTomRice,Tom Rice
+554,SD,R,Senator,SenJohnThune,John Thune
+555,SD,R,Senator,SenatorRounds,Mike Rounds
+556,SD,R,Representative,RepDustyJohnson,Dusty Johnson
+557,TN,R,Senator,MarshaBlackburn,Marsha Blackburn
+558,TN,R,Senator,SenAlexander,Lamar Alexander
+559,TN,R,Representative,DrPhilRoe,Phil Roe
+560,TN,R,Representative,RepTimBurchett,Tim Burchett
+561,TN,R,Representative,RepChuck,Chuck Fleischmann
+562,TN,R,Representative,DesJarlaisTN04,Scott DesJarlais
+563,TN,D,Representative,repjimcooper,Jim Cooper
+564,TN,R,Representative,RepJohnRose,John W. Rose
+565,TN,R,Representative,RepMarkGreen,Mark Green
+566,TN,R,Representative,DavidKustoff,David Kustoff
+567,TN,D,Representative,RepCohen,Steve Cohen
+568,TX,R,Senator,SenTedCruz,Ted Cruz
+569,TX,R,Senator,JohnCornyn,John Cornyn
+570,TX,R,Representative,replouiegohmert,Louie Gohmert
+571,TX,R,Representative,RepDanCrenshaw,Dan Crenshaw
+572,TX,R,Representative,RepVanTaylor,Van Taylor
+573,TX,R,Representative,Lancegooden,Lance Gooden
+574,TX,R,Representative,RepRonWright,Ron Wright
+575,TX,D,Representative,RepFletcher,Lizzie Fletcher
+576,TX,R,Representative,RepKevinBrady,Kevin Brady
+577,TX,D,Representative,RepAlGreen,Al Green
+578,TX,R,Representative,RepMcCaul,Michael T. McCaul
+579,TX,R,Representative,ConawayTX11,K. Michael Conaway
+580,TX,R,Representative,RepKayGranger,Kay Granger
+581,TX,R,Representative,MacTXPress,Mac Thornberry
+582,TX,R,Representative,TXRandy14,Randy Weber
+583,TX,D,Representative,RepGonzalez,Vincente Gonzalez
+584,TX,D,Representative,RepEscobar,Veronica Escobar
+585,TX,R,Representative,RepBillFlores,Bill Flores
+586,TX,D,Representative,JacksonLeeTX18,Sheila Jackson Lee
+587,TX,R,Representative,JodeyArrington,Jodey Arrington
+588,TX,D,Representative,JoaquinCastrotx,Joaquin Castro
+589,TX,R,Representative,RepChipRoy,Chip Roy
+590,TX,R,Representative,PeteOlson,Pete Olson
+591,TX,R,Representative,HurdOnTheHill,Will Hurd
+592,TX,R,Representative,RepKenMarchant,Kenny Marchant
+593,TX,R,Representative,RepRWilliams,Roger Williams
+594,TX,R,Representative,michaelcburgess,Michael Burgess
+595,TX,R,Representative,RepCloudTX,Michael Cloud
+596,TX,D,Representative,RepCuellar,Henry Cuellar
+597,TX,D,Representative,RepSylviaGarcia,Sylvia Garcia
+598,TX,D,Representative,RepEBJ,Eddie Bernice Johnson
+599,TX,R,Representative,JudgeCarter,John Carter
+600,TX,D,Representative,RepColinAllred,Colin Allred
+601,TX,D,Representative,RepVeasey,Marc Veasey
+602,TX,D,Representative,RepFilemonVela,Filemon Vela
+603,TX,D,Representative,RepLloydDoggett,Lloyd Doggett
+604,TX,R,Representative,RepBrianBabin,Brian Babin
+605,UT,R,Senator,SenMikeLee,Mike Lee
+606,UT,R,Senator,SenatorRomney,Mitt Romney
+607,UT,R,Representative,RepChrisStewart,Chris Stewart
+608,UT,R,Representative,RepJohnCurtis,John R. Curtis
+609,UT,D,Representative,RepBenMcAdams,Ben McAdams
+610,VT,I,Senator,SenSanders,Bernie Sanders
+611,VT,D,Senator, @SenatorLeahy,Patrick Leahy
+612,VT,D,Representative,PeterWelch,Peter Welch
+613,VA,D,Senator,MarkWarner,Mark Warner
+614,VA,D,Senator,timkaine,Tim Kaine
+615,VA,R,Representative,RobWittman,Robert J. Wittman
+616,VA,D,Representative,RepElaineLuria,Elaine Luria
+617,VA,D,Representative,BobbyScott,Robert C. Scott
+618,VA,R,Representative,Donald_McEachin,Donald McEacchin
+619,VA,R,Representative,RepRiggleman,Denver Riggleman
+620,VA,R,Representative,RepBenCline,Ben Cline
+621,VA,D,Representative,RepSpanberger,Abigail Spanberger
+622,VA,D,Representative,RepDonBeyer,Don Beyer
+623,VA,R,Representative,RepMGriffith,Morgan Griffith
+624,VA,D,Representative,RepWexton,Jennifer Wexton
+625,VA,D,Representative,GerryConnolly,Gerald E. “Gerry” Connolly
+626,VI,D,Representative,StaceyPlaskett,Stacey Plaskett
+627,WA,D,Senator,PattyMurray,Patty Murray
+628,WA,D,Senator,SenatorCantwell,Maria Cantwell
+629,WA,D,Representative,RepDelBene,Suzan DelBene
+630,WA,D,Representative,RepRickLarsen,Rick Larsen
+631,WA,R,Representative,HerreraBeutler,Jaime Herrera Beutler
+632,WA,R,Representative,RepNewhouse,Dan Newhouse
+633,WA,R,Representative,cathymcmorris,Cathy McMorris Rodgers
+634,WA,D,Representative,RepDerekKilmer,Derek Kilmer
+635,WA,D,Representative,PramilaJayapal,Pramila Jayapal
+636,WA,D,Representative,RepKimSchrier,Kim Schrier
+637,WA,D,Representative,RepAdamSmith,Adam Smith
+638,WA,D,Representative,RepDennyHeck,Denny Heck
+639,WV,D,Senator,Sen_JoeManchin,Joe Manchin
+640,WV,R,Senator,SenCapito,Shelley Moore Capito
+641,WV,R,Representative,RepMcKinley,David McKinley
+642,WV,R,Representative,RepAlexMooney,Alex Mooney
+643,WV,R,Representative,RepCarolMiller,Carol Miller
+644,WI,R,Senator,SenRonJohnson,Ron Johnson
+645,WI,D,Senator,SenatorBaldwin,Tammy Baldwin
+646,WI,D,Representative,RepBryanSteil,Bryan Steil
+647,WI,D,Representative,repmarkpocan,Mark Pocan
+648,WI,D,Representative,RepRonKind,Ron Kind
+649,WI,D,Representative,RepGwenMoore,Gwen Moore
+650,WI,R,Representative,JimPressOffice,F. James Sensenbrenner
+651,WI,R,Representative,RepGrothman,Glenn Grothman
+652,WI,R,Representative,TomTiffanyWI,Thomas Tiffany
+653,WI,R,Representative,MikeforWI,Mike Gallagher
+654,WY,R,Senator,SenatorEnzi,Mike Enzi
+655,WY,R,Senator,SenJohnBarrasso,John Barrasso
+656,WY,R,Representative,Liz_Cheney,Liz Cheney
+657,,R,POTUS,realDonaldTrump,Donald J. Trump
