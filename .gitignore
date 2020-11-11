@@ -35,3 +35,4 @@ var/
 *.egg-info/
 .installed.cfg
 *.egg
+src/tools/twitter_api2.py
