@@ -36,3 +36,4 @@ var/
 .installed.cfg
 *.egg
 src/tools/twitter_api2.py
+Data/Interim/tweets_congress_all.csv

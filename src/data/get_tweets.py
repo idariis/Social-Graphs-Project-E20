@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import tweepy
 import datetime
+import time
 from tqdm import trange
 from src.tools.twitter_api import auth
 
@@ -29,31 +30,37 @@ info = ['representatives115', 'representatives116', 'senators115', 'senators116'
 #%%
 
 results = []
+backoff_counter = 1
+for k, congress in enumerate(all_congress):
+    print(info[k])
+    for i in trange(len(congress) // 100):
+        try:
+            ids = list(congress[i * 100 : i * 100 + 100])
 
-for j, congrees in enumerate(all_congress):
-    print(info[j], j, '/', 4)
+            for t in api.statuses_lookup(id_=ids):
+                response = [
+                    (
+                        t.user.id,
+                        t.user.name,
+                        t.id,
+                        t.created_at,
+                        t.text,
+                        t.retweet_count,
+                        t.favorite_count,
+                        t.in_reply_to_status_id,
+                        t.in_reply_to_user_id,
+                    )
+                ]
+                results.extend(response)
 
-    for i in trange(len(congrees) // 100):
+        except tweepy.TweepError as e:
+            print(e.reason)
+            print("Sleeping for {} seconds".format(60*backoff_counter))
+            time.sleep(60*backoff_counter)
+            backoff_counter += 1
+            continue
 
-        ids = list(congrees[i * 100 : i * 100 + 100])
-        response = [
-            (
-                t.user.id,
-                t.user.name,
-                t.id,
-                t.created_at,
-                t.text,
-                t.retweet_count,
-                t.favorite_count,
-                t.in_reply_to_status_id,
-                t.in_reply_to_user_id,
-            )
-            for t in api.statuses_lookup(id_=ids)
-        ]
-        results.extend(response)
-        
-#%%
-tweets_congress = pd.DataFrame(
+tweets_congres_all = pd.DataFrame(
     results,
     columns=[
         "user_id",
@@ -67,7 +74,7 @@ tweets_congress = pd.DataFrame(
         "in_reply_to_user_id",
     ],
 )
+tweets_congres_all.to_csv('../../Data/Interim/tweets_congress_all.csv')
 
-tweets_congress.to_csv('../../Data/Interim/tweets_congress.csv')
 
 # %%
