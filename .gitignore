@@ -37,3 +37,4 @@ var/
 *.egg
 src/tools/twitter_api2.py
 Data/Interim/tweets_congress_all.csv
+*.pkl
