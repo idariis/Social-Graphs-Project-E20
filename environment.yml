@@ -18,6 +18,8 @@ dependencies:
   - pip:
       - "--editable ."
       - tweepy
+      - svgpathtools
+      - svgpath2mpl
       - fa2
       - powerlaw
       - wordcloud
