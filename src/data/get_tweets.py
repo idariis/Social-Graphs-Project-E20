@@ -94,14 +94,4 @@ for i in trange(len(congress_tweets) // 100):
     tweets_congres.to_pickle(
         "../../Data/Interim/" + file_name + ".pkl"
     )
-#%%    
-len(senators116)
-
-# %%
-len(results)
-
-
-# %%
-tweets_congres.shape
-
-# %%
+#
