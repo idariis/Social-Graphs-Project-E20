@@ -38,3 +38,6 @@ var/
 src/tools/twitter_api2.py
 Data/Interim/tweets_congress_all.csv
 *.pkl
+*.jsonl
+Data/Raw/Tweets/trump.json
+*.pyc
