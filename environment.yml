@@ -1,4 +1,7 @@
 name: social_graphs_project
+channels:
+  - conda-forge
+  - defaults
 dependencies:
   - python=3.7
   - networkx=2.5
