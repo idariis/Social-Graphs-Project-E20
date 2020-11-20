@@ -41,3 +41,4 @@ Data/Interim/tweets_congress_all.csv
 *.jsonl
 Data/Raw/Tweets/trump.json
 *.pyc
+Data/Raw/Tweets/Trump.csv

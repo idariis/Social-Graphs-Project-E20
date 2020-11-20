@@ -17,6 +17,8 @@ dependencies:
   - nltk
   - python-louvain
   - camelot-py
+  - plotly
+  - cufflinks-py
   - pip
   - pip:
       - "--editable ."

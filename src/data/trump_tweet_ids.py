@@ -1,13 +1,9 @@
 # importing the module 
-import json 
-  
-# Opening JSON file 
-with open('../../data/raw/tweets/trump.json') as json_file: 
-    data = json.load(json_file) 
+import pandas as pd
 
-trump_ids = []
-for tweet in data:
-    trump_ids.append(tweet['id'])
+df_trump_tweets = pd.read_csv('../../data/raw/tweets/trump.csv')  
+
+trump_ids = list(df_trump_tweets.id.astype(int).values)
 
 with open("../../data/raw/tweets/trump_id.txt", 'w') as output:
     for row in trump_ids:
