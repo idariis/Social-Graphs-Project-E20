@@ -40,4 +40,15 @@ file_name = 'congress'
 congress.to_pickle(
         "../../Data/Interim/" + file_name + ".pkl"
     )
+#
+# %%
+[type(c) for c in congress.columns]
+# %%
+congress = pd.read_pickle('../../Data/Interim/congress.pkl')
+# %%
+pd.__version__
+# %%
+
+# %%
+
 # %%
