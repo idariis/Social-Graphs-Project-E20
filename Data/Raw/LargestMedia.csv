@@ -1,17 +1,17 @@
-﻿Media;Type;Twitter name
-ABC News;Television;ABC
-CBS News;Television, radio;CBSNews
-CNN;Television;CNN
-Fox News;Television;FoxNews
-MSNBC;Television;MSNBC
-NBC News;Television;NBCNews
-Bloomberg;Online;business
-The New York Times;Newspaper;nytimes
-USA Today Politics;Newspaper;usatodayDC
-Breitbart News;Online;BreitbartNews
-TIME;Online;TIME
-The Hill;Online;thehill
-POLITICO;Online;politico
-The Wall Street Journal;Newspaper;WSJ
-The Economist;Newspaper;TheEconomist
-HuffPost;Online;HuffPost
+﻿Media;Type;Twitter name;twitter_display_name
+ABC News;Television;ABC;ABC News
+CBS News;Television, radio;CBSNews;CBS News
+CNN;Television;CNN;CNN
+Fox News;Television;FoxNews;Fox News
+MSNBC;Television;MSNBC;MSNBC
+NBC News;Television;NBCNews;NBC News
+Bloomberg;Online;business;Bloomberg
+The New York Times;Newspaper;nytimes;The New York Times
+USA Today Politics;Newspaper;usatodayDC;USA TODAY Politics
+Breitbart News;Online;BreitbartNews;Breitbart News
+TIME;Online;TIME;TIME
+The Hill;Online;thehill;The Hill
+POLITICO;Online;politico;POLITICO
+The Wall Street Journal;Newspaper;WSJ;The Wall Street Journal
+The Economist;Newspaper;TheEconomist;The Economist
+HuffPost;Online;HuffPost;HuffPost
