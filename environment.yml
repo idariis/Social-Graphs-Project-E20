@@ -28,3 +28,4 @@ dependencies:
       - fa2
       - powerlaw
       - wordcloud
+      - cite2c
