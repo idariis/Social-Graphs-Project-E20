@@ -10,10 +10,11 @@
 *.env
 
 # TwitterApi
-src/tools/twitter_api.py
-
+src/tools/twitter_api_credentials.py
+src/tools/twitter_api2.py
 # Data
-#Data/
+
+
 
 # Distribution / packaging
 src/tools/__pycache__/
@@ -35,10 +36,7 @@ var/
 *.egg-info/
 .installed.cfg
 *.egg
-src/tools/twitter_api2.py
-Data/Interim/tweets_congress_all.csv
+
 *.pkl
 *.jsonl
-Data/Raw/Tweets/trump.json
 *.pyc
-Data/Raw/Tweets/Trump.csv
