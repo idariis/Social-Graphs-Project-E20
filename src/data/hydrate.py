@@ -73,8 +73,8 @@ def hydrate_tweets(tweet_ids, filepath, api):
                     "in_reply_to_user_id",
                 ],
             )
-        
-        tweets_congres.to_pickle(filepath)
+    
+    tweets_congres.to_pickle(filepath)
 
 
 if __name__ == "__main__":
