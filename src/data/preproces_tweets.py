@@ -15,7 +15,6 @@ regex_links = re.compile("http\S+")
 regex_whitespace = re.compile("[\s|-]+")
 regex_unknown = re.compile(f"[^{alphabet}]+")
 
-
 regex_html_tags = {
     "&amp": "and",
     "&lt": "<",
