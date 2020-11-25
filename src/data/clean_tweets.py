@@ -16,7 +16,7 @@ mask = (
     #January 27, 2019 and May 7, 2020 
     (congress.created_at > '2019-1-27 00:00:00') & (congress.created_at < '2020-5-7 00:00:00')
 )
-congress = congress[mask]
+
 congress = congress.drop_duplicates(keep='first')
 congress = congress.sort_values(by='created_at')
 congress = congress.reset_index(drop=True)
