@@ -78,23 +78,23 @@ def hydrate_tweets(tweet_ids, filepath, api):
 
 
 if __name__ == "__main__":
-    from src.tools.twitter_api import auth
+    from src.tools.twitter_api_credentials import auth
 
     api = tweepy.API(auth, wait_on_rate_limit=True)
 
     representatives115 = np.loadtxt(
-        "../Data/Raw/Tweets/representatives115.txt", dtype=int
+        "Data/Raw/Tweets/representatives115.txt", dtype=int
     )
     representatives116 = np.loadtxt(
-        "../Data/Raw/Tweets/representatives116.txt", dtype=int
+        "Data/Raw/Tweets/representatives116.txt", dtype=int
     )
-    senators115 = np.loadtxt("../Data/Raw/Tweets/senators115.txt", dtype=int)
-    senators116 = np.loadtxt("../Data/Raw/Tweets/senators116.txt", dtype=int)
-    trump = np.loadtxt("../Data/Raw/Tweets/trump_id.txt", dtype=int)
+    senators115 = np.loadtxt("Data/Raw/Tweets/senators115.txt", dtype=int)
+    senators116 = np.loadtxt("Data/Raw/Tweets/senators116.txt", dtype=int)
+    trump = np.loadtxt("Data/Raw/Tweets/trump_id.txt", dtype=int)
 
 
-    congress = representatives115 + representatives116 + senators115 + senators116 + trump
-    filepath = "Data/interim/tmp.pkl"
+    congress = np.concatenate([representatives115, representatives116, senators115, senators116, trump])
+    filepath = "Data/interim/congress.pkl"
 
     hydrate_tweets(
         tweet_ids=congress,
