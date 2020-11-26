@@ -12,11 +12,12 @@ def hydrate_tweets(tweet_ids, filepath, api):
     exception_list = []
     results = []
     backoff_counter = 1
-    for i in trange(len(tweet_ids) // 100):
+    # Plus with 1 to get the remainder of division with 100
+    for i in trange( (len(tweet_ids) // 100))+1:
 
         while True:
             try:
-
+                
                 ids = list(tweet_ids[i * 100 : i * 100 + 100])
                 for t in api.statuses_lookup(id_=ids, tweet_mode="extended"):
 
