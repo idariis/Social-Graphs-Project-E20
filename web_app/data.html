@@ -54,15 +54,13 @@
       <div class="col-lg-12 text-left">
         <h1 class="mt-5">Data used to perform the analysis</h1>
         <p>
-            The precidency of Donald J. Trump began at noon EST (17:00 UTC) on January 20, 2017 when he was inaugurated as the 45th president of the United States, and will com to an end the on January 20, 2021 as he ultimately lost the 2020 presidential election to Joe Biden. It is not far fetched to say it has been bizare precidency compared to the most recent precidencies. 
+            This page will describe how the data to perform the analysis was exstracted. In order to easily download tweets a Twitter Developer account is needed. Access to that can easily be applied for at <a href='https://developer.twitter.com/en/apply-for-access'> Apply for access</a>. With the account the Twitter API can be ultized.
+            The Twitter API only get one access to to exctract the most reason 3200 tweets from a given account (3200 tweet do not go far back for many american polticians). However, Twitter's Terms of Service do allow for datasets of tweets ID's to be distributed to third parties (not the full JSON). And tweets dating back can be exstracted if one has the ID how the tweets. 
         </p>
-        <p>
-            It feels like America has been splitted in two the suporters of Trump and those agianst him - Repulicans agianst Democrats. In this project we wanted to explore if our hypothesis of polarization can be seen or rejected by analyzing the Congress of United States behavoir on the social media Twitter including the infamous Twitter account manged by Donald J. Trump. The idea was to analyze the congress tweets from the time of the 45th precidency to explore potential polarization.
+        <p>   
+            We found two sources that keep tweet id open related to our project, and one sources that stored the full length tweets of Donald Trump. The three sources are listed below:
         </p>
-        <p>
-            With access to the Twitter API it is only possible to exctract the most reason 3200 tweets from a given account (3200 tweet do not go far back for many american polticians). However, Twitter's Terms of Service do allow for datasets of tweets ID's to be distributed to third parties (not the full JSON). Luckily we found two sources that keep tweet id open very related to our project and one sources that stored the full length tweets of Donald Trump namely:
-        </p>
-    </div>
+     </div>
     <div class="col-lg-12 text-left">
         <b> 115th U.S. Congress Tweet Ids </b> <br>
         A open dataset with 2,041,399 tweets from the Twitter accounts of members of the 115th U.S. Congress collected in the period of January 27, 2017 and January 2, 2019. The dataset consists two files of interest namely
@@ -71,8 +69,9 @@
             <li>representatives-1.txt: that contains tweet ids for Representatives</li>
         </ul>
         <i>Littman, Justin, 2017, "115th U.S. Congress Tweet Ids, <a href='https://doi.org/10.7910/DVN/UIVHQR'>https://doi.org/10.7910/DVN/UIVHQR</a>, Harvard Dataverse, V5.</i>
+        <br/><br/>
     </div>
-    <br/>
+   
     <div class="col-lg-12 text-left">
         <b> 116th U.S. Congress Tweet Ids </b> <br>
         A open dataset with 2,817,747 tweets from the Twitter accounts of members of the 116th U.S. Congress collected in the period of January 27, 2019 and May 7, 2020.  The dataset consists two files of interest namely
@@ -81,17 +80,28 @@
             <li>Representatives: congress116-house-ids.txt` that contains tweet ids for Representatives</li>
         </ul>
         <i>Wrubel, Laura; Kerchner, Daniel, 2020, "116th U.S. Congress Tweet Ids, <a href='https://doi.org/10.7910/DVN/MBOJNS'>https://doi.org/10.7910/DVN/MBOJNS</a>, Harvard Dataverse, V5.</i>
+        <br/><br/>
     </div>
-    <br/>
+
     <div class="col-lg-12 text-left">
         <b> Trump Twitter Archive </b> <br>
         A site dedicated to scrape every single tweet from Donald J. Trump. Here we downloaded all tweets in the periods of January 27, 2017 and January 2, 2019 and January 27, 2019 and May 7, 2020.
         <a href='https://www.thetrumparchive.com/'> Trump Twitter Archive </a>
+        <br/> <br/>
     </div>
     <div class="col-lg-12 text-left">
-        <h2 class="mt-5">How the results can be re-created</h2>
+        <h2 class="mt-5">How the data can be re-created</h2>
+        As we per Twitter's Terms of Service can't distribute full length tweets we naturally can't share the data we have performed our analysis on.
+        However, we have created a Jupyter-Notebook that in details elaborate how the data set can be re-created. The notebook can be viewed online by clicking the jupyter logo below. 
     </div>
-
+    <div class="col-lg-12 text-center">
+        <a href = 'https://nbviewer.jupyter.org/github/MikkelGroenning/social_graph/blob/main/Notebooks/Exstract_And_Clean_data.ipynb'>
+            <img alt="Qries" src='figures/Jupyter_logo.png', width=150">
+        </a>    
+    </div>
+    <div class="col-lg-12 text-center">
+        <br><br><br><br>
+    </div>
     </div>
   </div>
 
