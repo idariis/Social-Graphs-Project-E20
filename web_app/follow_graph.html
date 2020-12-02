@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Social Graphs and Interactions</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Social Graphs and Interactions</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="data.html">Data</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="data_presentation.html">Data Presentation</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="follow_graph.html">Follow Graph</a>
+            <span class="sr-only">(current)</span>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://nbviewer.jupyter.org/github/MikkelGroenning/social_graph/blob/main/Notebooks/Explainer_Notebook.ipynb">Explainer Notebook</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+ <!-- Page Content -->
+ <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h1 class="mt-5">Follow Graph Analysis</h1>
+        <p>
+          In this section result from the follow graph will be presented. 
+          The follow graph is constructed based on which profiles that follow eachother on Twitter.
+          In other words if e.g. a Senator follows anoter Senator on Twitter a directed edge between them is constructed.
+          The idea is illustrated in the image below. 
+          In this graph we consider the three politicans <i>Dean Heller</i>, <i>Alexandria Ocasio-Cortez</i> and <i>Bernie Sanders</i> as nodes. 
+          There is directed edge between <i>Dean Heller</i> and <i>Alexandria Ocasio-Cortez</i> that means that <i>Dean Heller</i> follows <i>Alexandria Ocasio-Cortez</i> on Twitter.
+          As <i>Alexandria Ocasio-Cortez</i> does not follow <i>Dean Heller</i> there is not edge going the opposite direction. 
+          Following the annology it can be seen that <i>Bernie Sanders</i> follow <i>Alexandria Ocasio-Cortez</i> and vice wheras <i>Dean Heller</i> follow <i>Bernie Sander</i> but <i>Bernie Sanders</i> does not follow <i>Dean Heller</i>. 
+          This is the type of graph that will be created for all 618 politicans in our dataset.
+        </p>
+        <div class="col-lg-12 text-center">
+          <img src='figures/follow_graph_illustrated.png', width=500", style ="padding: 25px">
+        </div>
+        <h2 class="mt-5">Constructing the Graph</h2>
+        <p>
+        The graph is constructed by looking up every politican in the dataset Twitter profile with Twitter API.
+        Here it is exstracted who the profile follows and directed links are created between the politicans as described above.
+        The total progress can be seen in <TT>Get_follow_Adjancency</TT> notebook or quickly access <a href="https://nbviewer.jupyter.org/github/MikkelGroenning/social_graph/blob/main/Notebooks/Get_follow_Adjancency.ipynb."> here</a>.
+        </p>
+        <p>
+        The created graph contains 618 nodes but as three politicians who act as isolates they are removed - so the graph that will be considered contain 615 nodes.
+        This graph contrain a total of 83778 edges.
+        With that many edged´s the network can definitly be consideres dense as each politician follows approximately 137 of the other politicians, on average.
+        This corresponds to around 22% of all polticians. Following this info it will be investigated if patterns can be seen in who follows who.
+        </p>
+        <h4 class="mt-5">Follows by party </h4>
+        <p>
+            In the table below the follow pattern on a party level can be seen.
+        </p>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col"> </th>
+                <th scope="col">Republican</th>
+                <th scope="col">Democrat</th>
+                <th scope="col">Independent</th>
+                <th scope="col">Libertarian</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Republican</th>
+                <td>29359</td>
+                <td>5768</td>
+                <td>74</td>
+                <td>139</td>
+              </tr>
+              <tr>
+                <th scope="row">Democrat</th>
+                <td>6819</td>
+                <td>40595</td>
+                <td>258</td>
+                <td>61</td>
+              </tr>
+              <tr>
+                <th scope="row">Independent</th>
+                <td>53</td>
+                <td>113</td>
+                <td>2</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <th scope="row">Libertarian</th>
+                <td>266</td>
+                <td>269</td>
+                <td>2</td>
+                <td>0</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>
+            The first thing one would probably notice by looking at Table is that the Republicans and Democrats have a very clear bias towards following politicians from their own party. 
+            Looking at the two independent senators they seem to have bais towards to Democrats while the sole Libetarian seems very neutral.
+          </p>
+          <h4 class="mt-5">Follows by type </h4>
+          <p>
+              In table below it can be seen what type of politicians, that is Representative, Senators and the POTUS, follows who.
+          </p>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col">Senator</th>
+                <th scope="col">Representative</th>
+                <th scope="col">POTUS</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Senator</th>
+                <td>6649</td>
+                <td>4108</td>
+                <td>50</td>
+              </tr>
+              <tr>
+                <th scope="row">Representative</th>
+                <td>10213</td>
+                <td>62492</td>
+                <td>264</td>
+              </tr>
+              <tr>
+                <th scope="row">POTUS</th>
+                <td>0</td>
+                <td>2</td>
+                <td>0</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>
+            Here it is very interesting to see that the senators have a clear bias towards following other senators. 
+            Even though there is around 5 times more Representative the Senators have about 1.5 more links to other Senators than Representatives.  
+            For the Representitatives, it seems to be more inline with the actual distribution.
+            For both Representatives and the Senators around half of the follows the President - in return, he only follows 2 profiles in our dataset.
+          </p>
+          <h4 class="mt-5">The follow graph</h4>
+          <p>
+            Below can the full follow graph for be seen. Note that edges have only been drawn if there is a link going in both direction between a node - as the edges would become to overwhelming. 
+            Furthermore only <i>Giant Connected Component</i> are displayed.
+            The interactive window allow for removing edges and nodes by clicking the legend to the right.
+            Furthermore hovering over node revial who the politicans is at a tool.
+          </p>
+          <div class="col-lg-12 text-center">
+            <iframe src="plotly_files/follower_graph.html" width="100%" height="600"></iframe> 
+          </div>
+          <p>
+            As can be seen the network is super-dense! In the fact the <i>average shortage path lengh</i> is just 1.81. 
+            The number can be confirmed by examining the explainer-notebook.  
+            It only takes around two steps on average to get to another node from any node in graph.
+          </p>
+          <p>
+              The graph is so dense it contain a clique of 51 nodes - all Democrats. 
+              The seconds largest clique is 33 nodes consiting of only Republicans
+          </p>
+          <h3 class="mt-5">In - and out degree</h3>
+          Based on the out and in degree fom the network it can be determined who follows the most other politicians and who has the most follows.
+          In the table below is it shown which 10 politicians have higest in - and out degree.
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">In-degree</th>
+                <th scope="col" style="border-left:2px solid #dee2e6">Name</th>
+                <th scope="col">Out-degree</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Nancy Pelosi</td>
+                <td>337</td>
+                <td style="border-left:2px solid #dee2e6">Justin Amash</td>
+                <td>537</td>
+              </tr>
+              <tr>
+                <td>Donald J. Trump</td>
+                <td>314</td>
+                <td style="border-left:2px solid #dee2e6">Matt Cartwright</td>
+                <td>486</td>
+              </tr>
+              <tr>
+                <td>Kevin McCarthy</td>
+                <td>313</td>
+                <td style="border-left:2px solid #dee2e6">Mark Pocan</td>
+                <td>482</td>
+              </tr>
+              <tr>
+                <td>Steny H. Hoyer</td>
+                <td>291</td>
+                <td style="border-left:2px solid #dee2e6">Jared Golden</td>
+                <td>472</td>
+              </tr>
+              <tr>
+                <td>John Lewis</td>
+                <td>263</td>
+                <td style="border-left:2px solid #dee2e6">Trent Kelly</td>
+                <td>460</td>
+              </tr>
+              <tr>
+                <td>Adam Schiff</td>
+                <td>260</td>
+                <td style="border-left:2px solid #dee2e6">Ted Lieu</td>
+                <td>432</td>
+              </tr>
+              <tr>
+                <td>Kyrsten Sinema</td>
+                <td>258</td>
+                <td style="border-left:2px solid #dee2e6">Erik Paulsen</td>
+                <td>431</td>
+              </tr>
+              <tr>
+                <td>Chuck Schumer</td>
+                <td>257</td>
+                <td style="border-left:2px solid #dee2e6">Kyrsten Sinema</td>
+                <td>426</td>
+              </tr>
+              <tr>
+                <td>Steve Scalise</td>
+                <td>250</td>
+                <td style="border-left:2px solid #dee2e6">Glenn Thompson</td>
+                <td>426</td>
+              </tr>
+              <tr>
+                <td>Eric Swalwell</td>
+                <td>248</td>
+                <td style="border-left:2px solid #dee2e6">Dean Heller</td>
+                <td>424</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>
+            Considering the in-degree the top results are not surpring and it is probably some names that most people recognize.
+            Below is a decription of the top five:
+          </p>
+          <ol>
+              <li>Nancy Pelosi is the speaker in the House of Representatives</li>
+              <li>Donald J. Trump is POTUS (President)</li>
+              <li>Kenvin McCarthy serves as the Republican leader in the House of Representatives (both majority- and minority leader in the data set used.)</li>
+              <li>Steny H. Hoyer currently serves as the majority leader in the House of Representatives.</li>
+              <li>John Lewis served for 33 years in the House of Representatives untill his death in July of 2020 and has thought for civil rights and served in the leadership of the Democrats in the House.</li>
+          </ol>
+          <p>
+              The politians with highest out-degree are not as recognizable as before. 
+              However, but some slight info about the top 5 can be seen below
+          </p>
+          <ol>
+            <li>Justin Amash is the only Libitarian in the data set where little bias towards either major party was found earlier.</li>
+            <li>Matt Cartwright represents the Democrats in the House of Representatives and has done so since 2013.</li>
+            <li>Marc Pocan is also a Democrat who assumed office in the House of Representatives in 2013.</li>
+            <li>Jared Golden is a US veteran and Democrat in the House of Representatives.</li>
+            <li>Trent Kelly represents the Republicans in the House of Representatives.</li>
+        </ol>
+        <p>
+            So far we have only looked at the top 10 and the numbers of following as a function of total following. 
+            Below is  the in- and out degree distribution plotted histograms.
+        </p>
+        <div class="col-lg-12 text-center">
+            <iframe src="plotly_files/degree_histogram.html" width="100%" height="600"></iframe> 
+        </div>  
+        <p>
+            Very interesting (notice the shared axis)! 
+            It is clearly not the same distribution - the out-degree resembles as exponential distribution wheras the in-degree is more complicated.
+            The network is super-dense but where are no <i>hubs</i> as many nodes have many followers and follows many.
+            And almost all nodes seem to have at least a handfull of followers. 
+        </p>
+        <h3 class="mt-5">Assortativity</h3>
+        <p>
+            In the initial analysis of the edges, it was found how more likely politicians are to follow others from their own party compared to other parties. 
+            In this section the assortativity accross Parties, Type and State.
+            Below can a table be seen that sumarizes the result.
+        </p>
+        <table class="table" style ="width: 30%; margin: auto;">
+            <thead>
+            <tr>
+                <th scope="col"> </th>
+                <th scope="col">Assortativity</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">Party</th>
+                <td>0.812</td>
+
+            </tr>
+            <tr>
+                <th scope="row">Type</th>
+                <td>0.576</td>
+            </tr>
+            <tr>
+                <th scope="row">State</th>
+                <td>0.065</td>
+
+            </tr>
+            </tbody>
+        </table>
+        <p>
+            The associativity of Nodes from same party is 0.81 - a very high measure.
+            But not surprising given the structure of the graph. 
+            It clearly tells that politicians from the same parties likes to link up.
+        </p>
+        <p>    
+            From the plot of the graph it also looks like the senators are sepeareted from the representatives.
+            And it is confirmed with associativity of 0.58. 
+            Though it is lower than associativty accross parties it is still  a clear positive assortativity meaning that the politicians like to link up to other politicians of the same type.
+        </p>
+        <p> 
+            Across polticians from the same State a much lower value, though postivte assortativity is found 0.065.
+            Off course there are also way more states, where many of them only have a few politician which off course makes it harder to find very high assortativity.
+        </p>
+        
+        <h3 class="mt-5">Community Detection</h3>
+
+        <h5 class="mt-5">Communities based on states</h5>
+        <p></p>
+        <div class="col-lg-12 text-center">
+            <iframe src="plotly_files/Communities_States.html" width="100%" height="600"></iframe> 
+        </div>
+        The overseas territories are not included in the above plot. 
+        Their communities can be read in list below:
+        <ul>
+            <li>American Samoa: 0</li>
+            <li>Guam: 1</li>
+            <li>Northern Mariana Islands: 1</li>
+            <li>Puerto Rico: 0</li>
+            <li>Virgin Islands: 1</li>
+        </ul>
+
+        <h5 class="mt-5">Communities based on states</h5>
+        <p>
+            The best partition for communities are exstracted using the <i>Louvian algorithm</i>.
+            Upon convergence the algorithm find a total of 3 communities.
+        </p>
+        <div class="col-lg-12 text-center">
+            <iframe src="plotly_files/community_1.html" width="100%" height="600"></iframe> 
+        </div>
+        <div class="col-lg-12 text-center">
+            <iframe src="plotly_files/community_2.html" width="100%" height="600"></iframe> 
+        </div>
+        <div class="col-lg-12 text-center">
+            <img src='figures/Follow_graph_partition.jpg', width=100%", style ="padding: 25px">
+        </div>
+        <div class="col-lg-12 text-center">
+            <br/><br/><br/>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.slim.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

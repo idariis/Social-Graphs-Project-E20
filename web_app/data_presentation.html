@@ -38,6 +38,9 @@
             <span class="sr-only">(current)</span>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="follow_graph.html">Follow Graph</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="https://nbviewer.jupyter.org/github/MikkelGroenning/social_graph/blob/main/Notebooks/Explainer_Notebook.ipynb">Explainer Notebook</a>
           </li>
           <li class="nav-item">
@@ -116,36 +119,6 @@
           <iframe src="plotly_files/tweet_distribution.html" width="100%" height="600"></iframe> 
         </div>
         <p>From the stacked historgram a skewed distribution is seen. Most politicans have tweeted less than 5000 times, but a few are super active on the platform. </p>
-        <h2 class="mt-5">Follow Graph Analysis</h2>
-        <p class="lead">
-          In this section result from the follow graph will be presented. 
-          The follow graph is constructed based on which profiles that follow eachother on Twitter.
-          In other words if e.g. a Senator follows anoter Senator on Twitter a directed edge between them is constructed.
-          The idea is illustrated in the image below. 
-          In this graph we consider the three politicans <i>Dean Heller</i>, <i>Alexandria Ocasio-Cortez</i> and <i>Bernie Sanders</i> as nodes. 
-          There is directed edge between <i>Dean Heller</i> and <i>Alexandria Ocasio-Cortez</i> that means that <i>Dean Heller</i> follows <i>Alexandria Ocasio-Cortez</i> on Twitter.
-          As <i>Alexandria Ocasio-Cortez</i> does not follow <i>Dean Heller</i> there is not edge going the opposite direction. 
-          Following the annology it can be seen that <i>Bernie Sanders</i> follow <i>Alexandria Ocasio-Cortez</i> and vice wheras <i>Dean Heller</i> follow <i>Bernie Sander</i> but <i>Bernie Sanders</i> does not follow <i>Dean Heller</i>. 
-          This is the type of graph that will be created for all 618 politicans in our dataset.
-        </p>
-        <div class="col-lg-12 text-center">
-          <img src='figures/follow_graph_illustrated.png', width=450">
-        </div>
-        <p>
-          Below can the full follow graph for be seen. However, note that edges have only been drawn if there is a link going in both direction between a node. 
-          Furthermore only <i>Giant Connected Component</i> are displayed. 
-        </p>
-        <div class="col-lg-12 text-center">
-          <iframe src="plotly_files/follower_graph.html" width="100%" height="600"></iframe> 
-        </div>
-        <p class="lead">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-          eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
-          sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
     </div>
   </div>
 </div>
