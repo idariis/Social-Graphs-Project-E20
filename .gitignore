@@ -44,3 +44,4 @@ Notebooks/.ipynb_checkpoints/Make_Adjancency_Graph_refactor-checkpoint.ipynb
 Notebooks/.ipynb_checkpoints/getting_the_data-checkpoint.ipynb
 Notebooks/.ipynb_checkpoints/Get_handles-checkpoint.ipynb
 Notebooks/.ipynb_checkpoints/basic_stats-checkpoint.ipynb
+data/processed/TF_IDF.pickle
