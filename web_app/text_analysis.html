@@ -63,15 +63,15 @@
           On the this page the result for our analysis of the 1.6 million tweet that was extracted from the American will be presented.
         </p>
 
-        <h3 class="mt-5">TF-TR word clouds - from Communties</h3>
+        <h3 class="mt-5"> TF-TR Analysis for the three Communities </h3>
         <p>
             In this part TF-TR word clouds based on the tweets across the three communities will be created. 
             Recall on the page <a href ="follow_graph.html">Follow Graph</a> three communities. Where communties could be described as 
         </p>
         <ol>
-            <li>(se) Roughly all Senators access all parties</li>
-            <li>(rr) Roughly all Repulican Representatives</li>
-            <li>(dr) Roughly all Democratic Representatives</li>
+            <li>(<b>SE</b>) Roughly all Senators access all parties</li>
+            <li>(<b>RR</b>) Roughly all Repulican Representatives</li>
+            <li>(<b>(DR</b>) Roughly all Democratic Representatives</li>
         </ol>
         <p>
             The TF-TR model is the one made by Sune Lehmann for the course <a href ="https://kurser.dtu.dk/course/02805"> Social graphs and Interactions</a> in lecture week 7 in the course but it will in this part be expanded to handle three communities rather than two.
@@ -160,7 +160,7 @@
             <li><i>Biden</i> has grown much more into focus as election day came closer. It could be interesting if tweets were available up till the present day to see how it looked there. He has though been in focus since the summer of 2019 - they have long elections in the United States. </li>
             <li><i>Climate</i> has been in heavy focus across the full period.</li>
             <li><i>Amazon</i> which is both the rain forest in South America, but more important also the world's largest online retailer is also mentioned across the full period but it seems to be mentioned more frequently as there has been a larger focus on their work environment.</li>
-            <li>The <i>Schumer Shutdown</i> can also be located quite clearly in time using this method and it can be seen that it *trending* twice ' in late 2017 and 2018 - in the given time period.</li>
+            <li>The <i>Schumer Shutdown</i> can also be located quite clearly in time using this method and it can be seen that it <i>trending</i> twice in late 2017 and 2018 - in the given time period.</li>
             <li><i>Impeachment</i> has really 'gained traction' in the latter half of our time frame which must come from all possible cases against President Trump.</li>
             <li><i>Nominee</i> is generally mentioned a lot across the time period but there are some spikes. On April 7, 2017 and October 6, 2018 new supreme court judges were nominated - on July 31, 2018 a previous judge retired. So it has in general been in the first half of our time period that it has been a relevant subject and graph also reveals that.</li>
         </ul>
@@ -168,46 +168,116 @@
         <p>
             Let's move onto a sentiment analysis of the tweets. The analysis will be centered around the three communities found previously. 
             To carry out this analysis the sentiment scores used in class found <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0026752"> here </a> are also used for this analysis. 
-            Below can table be seen that summerizes how the, previously mentioned, three communities feel about the topics from the dispersion plot
         </p>
-        <table class="table">
+        <table class="table" style ="width: 45%; margin: auto;">
             <thead>
               <tr>
-                <th scope="col"> </th>
-                <th scope="col">Republican</th>
-                <th scope="col">Democrat</th>
-                <th scope="col">Independent</th>
-                <th scope="col">Libertarian</th>
+                <th scope="col"> Community </th>
+                <th scope="col">Sentiment Score</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <th scope="row">Republican</th>
-                <td>29359</td>
-                <td>5768</td>
-                <td>74</td>
-                <td>139</td>
+                <th scope="row">(SE) Roughly all Senators</th>
+                <td>5.4526</td>
               </tr>
               <tr>
-                <th scope="row">Democrat</th>
-                <td>6819</td>
-                <td>40595</td>
-                <td>258</td>
-                <td>61</td>
+                <th scope="row">(RR) Roughly all Repulican Representative  </th>
+                <td>5.4961</td>
               </tr>
               <tr>
-                <th scope="row">Independent</th>
-                <td>53</td>
-                <td>113</td>
-                <td>2</td>
-                <td>0</td>
+                <th scope="row">(DR) Roughly all Democratic Representatives</th>
+                <td>5.4497</td>
+              </tr>
+            </tbody>
+        </table>
+        <p>
+            The scores are seen to be fairly close to eachother with values around close to 5.5. 
+            Here, it should be noted that a neutral score is 5, so that means that all three communities are slightly positive.
+            It would be interesting to know how the communities feel about different topics.
+            Below can table be seen that summerizes how the, previously mentioned, three communities feel about the topics from the dispersion plot
+        </p>
+        <table class="table" style ="width: 75%; margin: auto;">
+            <thead>
+              <tr>
+                <th scope="col">Word</th>
+                <th scope="col">SE</th>
+                <th scope="col">RR</th>
+                <th scope="col">DR</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row"> covid </th>
+                <td> 5.448427 </td>
+                <td> 5.457984 </td>
+                <td> 5.445684 </td>
               </tr>
               <tr>
-                <th scope="row">Libertarian</th>
-                <td>266</td>
-                <td>269</td>
-                <td>2</td>
-                <td>0</td>
+                <th scope="row"> obamacare </th>
+                <td> 5.352579 </td>
+                <td> 5.388522 </td>
+                <td> 5.298308 </td>
+              </tr>
+              <tr>
+                <th scope="row"> trumpcare </th>
+                <td> 5.298128 </td>
+                <td> 5.422571 </td>
+                <td> 5.310299 </td>
+              </tr>
+              <tr>
+                <th scope="row"> biden </th>
+                <td> 5.380261 </td>
+                <td> 5.264630 </td>
+                <td> 5.416168 </td>
+              </tr>
+              <tr>
+                <th scope="row"> climate </th>
+                <td> 5.416446 </td>
+                <td> 5.416446 </td>
+                <td> 5.416446 </td>
+              </tr>
+              <tr>
+                <th scope="row"> amazon </th>
+                <td> 5.492679 </td>
+                <td> 5.583696 </td>
+                <td> 5.494438  </td>
+              </tr>
+              <tr>
+                <th scope="row"> taxcutandjobsact </th>
+                <td> 5.564140 </td>
+                <td> 5.533015 </td>
+                <td> 5.569412 </td>
+              </tr>
+              <tr>
+                <th scope="row"> impeachment </th>
+                <td> 5.329586 </td>
+                <td> 5.306957 </td>
+                <td> 5.351386 </td>
+              </tr>
+              <tr>
+                <th scope="row"> china </th>
+                <td> 5.385126 </td>
+                <td> 5.408563 </td>
+                <td> 5.386268 </td>
+              </tr>
+              <tr>
+                <th scope="row"> wall </th>
+                <td> 5.337919 </td>
+                <td> 5.373220  </td>
+                <td> 5.329724 </td>
+              </tr>
+              <tr>
+                <th scope="row"> mexico </th>
+                <td> 5.505136 </td>
+                <td> 5.523487 </td>
+                <td> 5.456053 </td>
+              </tr>
+              <tr>
+                <th scope="row"> nominee </th>
+                <td> 5.375035 </td>
+                <td> 5.483819 </td>
+                <td> 5.382862 </td>
               </tr>
             </tbody>
         </table>
@@ -233,40 +303,29 @@
                 <thead>
                   <tr>
                     <th scope="col"> </th>
-                    <th scope="col">Republican</th>
-                    <th scope="col">Democrat</th>
-                    <th scope="col">Independent</th>
-                    <th scope="col">Libertarian</th>
+                    <th scope="col">DR</th>
+                    <th scope="col">RR</th>
+                    <th scope="col">SE</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <th scope="row">Republican</th>
-                    <td>29359</td>
-                    <td>5768</td>
-                    <td>74</td>
-                    <td>139</td>
+                    <th scope="row">DR</th>
+                    <td>5.52306</td>
+                    <td>5.48723</td>
+                    <td>5.49105</td>
                   </tr>
                   <tr>
-                    <th scope="row">Democrat</th>
-                    <td>6819</td>
-                    <td>40595</td>
-                    <td>258</td>
-                    <td>61</td>
+                    <th scope="row">RR</th>
+                    <td>5.51957</td>
+                    <td>5.53238</td>
+                    <td>5.50991</td>
                   </tr>
                   <tr>
-                    <th scope="row">Independent</th>
-                    <td>53</td>
-                    <td>113</td>
-                    <td>2</td>
-                    <td>0</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Libertarian</th>
-                    <td>266</td>
-                    <td>269</td>
-                    <td>2</td>
-                    <td>0</td>
+                    <th scope="row">SE</th>
+                    <td>5.68092</td>
+                    <td>5.72002</td>
+                    <td>5.51831</td>
                   </tr>
                 </tbody>
             </table>
@@ -282,40 +341,40 @@
                 <thead>
                   <tr>
                     <th scope="col"> </th>
-                    <th scope="col">Republican</th>
-                    <th scope="col">Democrat</th>
-                    <th scope="col">Independent</th>
-                    <th scope="col">Libertarian</th>
+                    <th scope="col">Democrat Senators</th>
+                    <th scope="col">Democrat Representative</th>
+                    <th scope="col">Republican Representative</th>
+                    <th scope="col">Republican Senators</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <th scope="row">Republican</th>
-                    <td>29359</td>
-                    <td>5768</td>
-                    <td>74</td>
-                    <td>139</td>
+                    <th scope="row">Democrat Senators</th>
+                    <td>5.52306</td>
+                    <td>5.50838</td>
+                    <td>5.48723</td>
+                    <td>5.44685</td>
                   </tr>
                   <tr>
-                    <th scope="row">Democrat</th>
-                    <td>6819</td>
-                    <td>40595</td>
-                    <td>258</td>
-                    <td>61</td>
+                    <th scope="row">Democrat Representative</th>
+                    <td>5.71652</td>
+                    <td>5.51745</td>
+                    <td>5.91191	</td>
+                    <td>5.52731</td>
                   </tr>
                   <tr>
-                    <th scope="row">Independent</th>
-                    <td>53</td>
-                    <td>113</td>
-                    <td>2</td>
-                    <td>0</td>
+                    <th scope="row">Republican Representative</th>
+                    <td>5.51957</td>
+                    <td>5.49621</td>
+                    <td>5.53238</td>
+                    <td>5.51917</td>
                   </tr>
                   <tr>
-                    <th scope="row">Libertarian</th>
-                    <td>266</td>
-                    <td>269</td>
-                    <td>2</td>
-                    <td>0</td>
+                    <th scope="row">Republican Senators</th>
+                    <td>5.52259</td>
+                    <td>5.51997</td>
+                    <td>5.54933</td>
+                    <td>5.51087</td>
                   </tr>
                 </tbody>
             </table>
@@ -326,16 +385,16 @@
             </p>
         <h3 class="mt-5">Subconclussion </h3>
         <p>
-            In this part, various measures of natural language processing have been used to analyze the tweets taking a start in the communities found in the *Who-follow-who* graph.
+            In this part, various measures of natural language processing have been used to analyze the tweets taking a start in the communities found in the <i>Who-follow-who</i> graph.
             First TF-TR was carried out on the full set of tweets across the three communities to find important words in the communities. The results were illustrated as word clouds.
             Some of the words that were seen did make sense but in general, it was dominated by names. 
-            Afterwards, TF-IDF was carried out on a state level - leading to 55 *documents* - where word clouds again were used to illustrate the results. 
             Some meaningful takeaways could be found even though names again were dominant.
+            Afterwards, TF-IDF was carried out on a state level - leading to 55 <i>documents</i> - where word clouds again were used to illustrate the results. 
             We also created a lexical dispersion plot to see how the usage of some words varied in time where many of the results made sense thinking back on the last four years of American politics if one follows that.
         </p>
         <p>
             The last analysis was focused on the sentiment of the tweets - again based on the communities. 
-            Here we investigated how the communities *felt* towards different words where small differences could be seen.
+            Here we investigated how the communities <i>felt</i> towards different words where small differences could be seen.
             Lastly, it was also investigated how positive the politicians wrote when tagging each other. 
             Interestingly Democratic senators were found of Republican representatives but besides that, the results were as expected - but the differences were fairly minor.
         </p>
