@@ -350,9 +350,112 @@
         </p>
         
         <h3 class="mt-5">Community Detection</h3>
-
-        <h5 class="mt-5">Communities based on states</h5>
+        <p>
+          The last analysis that will be carried out on the graph is community detection and analysis.
+          First communities based on the data about the politicians will be investigated before looking at the Louvain method to create communities based on the actual links in the who-follow-who graph.
+        </p>
+      
+        <h5 class="mt-5">Communities based on party</h5>
         <p></p>
+        The first natural split that will be investigated is based on parties. 
+        Recall that all but 3 node were either Democrat or Republican - namely the two independent politicians Bernie Sanders and Angus King as well as the liberiatarian politician Justin Amash.
+        Here it will be explored which of the two large parties they are likely to support.
+        The approach to this analysis will be to see how these three politicians should be placed to obtain the highest modularity.
+        Now, for the three last politicians there are (\2^3=8\)  combinations.  
+        Below are all 8 combinations seen aloung with the modularity.
+
+        <table class="table" style ="width: 75%; margin: auto;">
+          <thead>
+          <tr>
+              <th scope="col"> </th>
+              <th scope="col">Angus King</th>
+              <th scope="col">Justin Amash</th>
+              <th scope="col">Bernie Sanders</th>
+              <th scope="col">Modularity</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+              <th scope="row">Combination 1</th>
+              <td>Democrat</td>
+              <td>Republican</td>
+              <td>Democrat</td>
+              <td>0.39995215762185693</td>
+          </tr>
+          <tr>
+            <th scope="row">Combination 2</th>
+            <td>Republican</td>
+            <td>Republican</td>
+            <td>Democrat</td>
+            <td>0.39987177882819747</td>
+          </tr>
+          <tr>
+            <th scope="row">Combination 3</th>
+            <td>Democrat</td>
+            <td>Republican</td>
+            <td>Republican</td>
+            <td>0.39799823775808124</td>
+          </tr>
+          <tr>
+            <th scope="row">Combination 4</th>
+            <td>Republican</td>
+            <td>Republican</td>
+            <td>Republican</td>
+            <td>0.397991850635138</td>
+          </tr>
+          <tr>
+            <th scope="row">Combination 5</th>
+            <td>Democrat</td>
+            <td>Democrat</td>
+            <td>Democrat</td>
+            <td>0.39547301737744023</td>
+          </tr>
+          <tr>
+            <th scope="row">Combination 6</th>
+            <td>Republican</td>
+            <td>Democrat</td>
+            <td>Democrat</td>
+            <td>0.3954127895068695</td>
+          </tr>
+          <tr>
+            <th scope="row">Combination 7</th>
+            <td>Republican</td>
+            <td>Democrat</td>
+            <td>Republican</td>
+            <td>0.3935517528042056</td>
+          </tr>
+          <tr>
+            <th scope="row">Combination 8</th>
+            <td>Democrat</td>
+            <td>Democrat</td>
+            <td>Republican</td>
+            <td>0.39353798900406023</td>
+          </tr>
+        </tbody>
+      </table>
+
+        <p>
+          The numbers are naturally close to eachother as the 3 nodes that are changed only makes up 0.5% of the total nodes. 
+          The best partition is though still found where the Libretarian, Justin Amash, is with the repulicans while the two Independent Senators are with the Democrats.
+          The Independent Senators have in general been with the Democrats under Donald Trump's presidency and Bernie Sanders also ran in the Democratic primary presidential election, so he is especially not surprising to see as a Democrat. 
+          In the ideal split the modularity based on the party split is 0.400.
+        </p>
+        <h5 class="mt-5">Communities based on states</h5>
+        <p>
+          The next split will be based on state. 
+          The modularity obtained is 0.063 which is much wors that the party-split.
+           There are though also now 56 communities where some are very small why it can make sense to try to increase it by merging the states.
+        </p>
+
+        <h6 class="mt-5">Trying to merge states</h6>
+        <p>
+          Now the states are merge with the Louvain algorithm.
+          This is done by first making a new a new weighted graph with 56 nodes - one corresponding to each state. 
+          The edges are now weighted where the weight between two states are given as the total number of links between politicians from these two states. 
+          This forces the first iteration in the Louvain method to first merge on a state level.
+          Now treating the states as new nodes the algorithm can be used to find the best state parition.
+          The result in communties accross States are shown on the map interactive map below.
+        </p>
         <div class="col-lg-12 text-center">
             <iframe src="plotly_files/Communities_States.html" width="100%" height="600"></iframe> 
         </div>
@@ -365,21 +468,55 @@
             <li>Puerto Rico: 0</li>
             <li>Virgin Islands: 1</li>
         </ul>
-
-        <h5 class="mt-5">Communities based on states</h5>
+        <p>
+          This is a very interesting map if one follows US politics.
+          Community one seems to include many of usual Republican states through the central and south east America.
+          Community 1 on the other hand is primarily Democratic states in New England and at the west coast.
+          Community 2 is also some usual Democratic states.
+          Community 3-7 contains only one state and it is states that is usually more divided and considered swing states in the presidential election (Texas is still primarily Republican). 
+          It is interesting that they are their own community here. 
+          Lastly community 7 is a bit harder to explain.
+        </p>
+        <p>
+          The modularity of the state communties are 0.134 higher than only considering one state but it is still much worse that the party split.
+        </p>
+        <h5 class="mt-5">Communities based on Louvain Algorithm</h5>
         <p>
             The best partition for communities are exstracted using the <i>Louvian algorithm</i>.
-            Upon convergence the algorithm find a total of 3 communities.
+            Upon convergence the algorithm find a total of 3 communities with modularity of 0.448.
+            It is not that much better than the obtained values in the party split which is an indication that the party split actually was not that bad. 
+            Let's gain a bit more knowledge of it by investigating who is in which community.
+            We will start of by looking at the types in the the communities.
         </p>
         <div class="col-lg-12 text-center">
             <iframe src="plotly_files/community_1.html" width="100%" height="600"></iframe> 
         </div>
+        <p>
+          From this histogram it becomes quite apparent that one community contains - with a few errors - the senators in the data while the two others are almost only representatives and the president.
+          Let's do the sama but on the a party level:
+        </p>
         <div class="col-lg-12 text-center">
             <iframe src="plotly_files/community_2.html" width="100%" height="600"></iframe> 
         </div>
+        <p>
+          So this tells that the two representative communities are perfectly split on a party level bar the Libertarian.
+          Naturally the senator community includes both parties.
+          Let's end off by visualising the communities - they are plotted below in graph.
+        </p>
         <div class="col-lg-12 text-center">
             <img src='figures/Follow_graph_partition.jpg', width=100%", style ="padding: 25px">
         </div>
+        <p>
+          The graph is off course the same and the result makes sense based on the initial analysis of the communities.
+          It is really impressive how clean they are split based on party and type!
+        </p>
+        <h3 class="mt-5">Subconclusion</h3>
+        <p>
+          In this part, a graph-based on what politicians follow each other has been created, visualized, and analyzed. 
+          The graph was very dense! Overall it was found that representatives very clearly followed others from their own party while the senators were more likely to follow other senators.
+          A lot of different tools for analyzing networks were used and the conclusion can be summarized to the fact that politicians are by a clear margin more likely to follow others with the same beliefs as themselves - this includes a split between senators and representatives too. 
+          When using the Louvain method three communities were found that can be summarized as senators, Republican representatives, and Democratic representatives.
+        </p>
         <div class="col-lg-12 text-center">
             <br/><br/><br/>
         </div>
