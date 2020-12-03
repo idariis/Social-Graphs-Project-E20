@@ -59,16 +59,16 @@
  <div class="container">
     <div class="row">
       <div class="col-lg-12 text-left">
-        <h1 class="mt-5">Follow Graph Analysis</h1>
+        <h1 class="mt-5">'Who Follows Whom'-Graph Analysis</h1>
         <p>
-          In this section result from the follow graph will be presented. 
-          The follow graph is constructed based on which profiles that follow eachother on Twitter.
-          In other words if e.g. a Senator follows anoter Senator on Twitter a directed edge between them is constructed.
-          The idea is illustrated in the image below. 
+          In this section results from the follow-graph will be presented. 
+          The follow-graph is constructed based on which profiles that follow each other on Twitter.
+          In other words if e.g. a Senator follows another Senator on Twitter a directed edge between them is constructed.
+          The idea is illustrated in the figure below. 
           In this graph we consider the three politicans <i>Dean Heller</i>, <i>Alexandria Ocasio-Cortez</i> and <i>Bernie Sanders</i> as nodes. 
-          There is directed edge between <i>Dean Heller</i> and <i>Alexandria Ocasio-Cortez</i> that means that <i>Dean Heller</i> follows <i>Alexandria Ocasio-Cortez</i> on Twitter.
+          There is a directed edge between <i>Dean Heller</i> and <i>Alexandria Ocasio-Cortez</i> which indicates that <i>Dean Heller</i> follows <i>Alexandria Ocasio-Cortez</i> on Twitter.
           As <i>Alexandria Ocasio-Cortez</i> does not follow <i>Dean Heller</i> there is not edge going the opposite direction. 
-          Following the annology it can be seen that <i>Bernie Sanders</i> follow <i>Alexandria Ocasio-Cortez</i> and vice wheras <i>Dean Heller</i> follow <i>Bernie Sander</i> but <i>Bernie Sanders</i> does not follow <i>Dean Heller</i>. 
+          Following the analogy it can be seen that <i>Bernie Sanders</i> follows <i>Alexandria Ocasio-Cortez</i> and vice versa. <i>Dean Heller</i> follows <i>Bernie Sander</i> but <i>Bernie Sanders</i> does not follow <i>Dean Heller</i>. 
           This is the type of graph that will be created for all 618 politicans in our dataset.
         </p>
         <div class="col-lg-12 text-center">
@@ -76,17 +76,16 @@
         </div>
         <h2 class="mt-5">Constructing the Graph</h2>
         <p>
-        The graph is constructed by looking up every politican in the dataset Twitter profile with Twitter API.
-        Here it is exstracted who the profile follows and directed links are created between the politicans as described above.
-        The total progress can be seen in <TT>Get_follow_Adjancency</TT> notebook or quickly access <a href="https://nbviewer.jupyter.org/github/MikkelGroenning/social_graph/blob/main/Notebooks/Get_follow_Adjancency.ipynb."> here</a>.
+        The graph is constructed by looking up every the Twitter profile of each politican using the Twitter API.
+        Here it is extracted who the profile follows and directed links are created between the politicans as described above.
+        The total progress can be seen in <TT>Get_follow_Adjancency</TT> notebook or <a href="https://nbviewer.jupyter.org/github/MikkelGroenning/social_graph/blob/main/Notebooks/Get_follow_Adjancency.ipynb."> here</a>.
         </p>
         <p>
-        The created graph contains 618 nodes but as three politicians who act as isolates they are removed - so the graph that will be considered contain 615 nodes.
-        This graph contrain a total of 83778 edges.
-        With that many edged´s the network can definitly be consideres dense as each politician follows approximately 137 of the other politicians, on average.
-        This corresponds to around 22% of all polticians. Following this info it will be investigated if patterns can be seen in who follows who.
+        The created graph contains 618 nodes but as three politicians act as isolates, they are removed. Thus, the graph considered contains 615 nodes with 83778 edges.
+        With that many edges the network can definitely be considered as dense since each politician follows approximately 137 of the other politicians, on average.
+        This corresponds to around 22% of all polticians. Following this info it will be investigated if patterns can be seen in who follows whom.
         </p>
-        <h4 class="mt-5">Follows by party </h4>
+        <h4 class="mt-5">Follows by Party </h4>
         <p>
             In the table below the follow pattern on a party level can be seen.
         </p>
@@ -132,12 +131,12 @@
             </tbody>
           </table>
           <p>
-            The first thing one would probably notice by looking at Table is that the Republicans and Democrats have a very clear bias towards following politicians from their own party. 
+            The first thing one would probably notice by looking at the table is that the Republicans and Democrats have a very clear bias towards following politicians from their own party. 
             Looking at the two independent senators they seem to have bais towards to Democrats while the sole Libetarian seems very neutral.
           </p>
-          <h4 class="mt-5">Follows by type </h4>
+          <h4 class="mt-5">Follows by Type </h4>
           <p>
-              In table below it can be seen what type of politicians, that is Representative, Senators and the POTUS, follows who.
+              In the table below it can be seen what type of politicians, that is Representative, Senators and the POTUS, follows whom.
           </p>
           <table class="table">
             <thead>
@@ -171,32 +170,32 @@
           </table>
           <p>
             Here it is very interesting to see that the senators have a clear bias towards following other senators. 
-            Even though there is around 5 times more Representative the Senators have about 1.5 more links to other Senators than Representatives.  
+            Even though there is around 5 times more Representative, the Senators have about 1.5 more links to other Senators than Representatives.  
             For the Representitatives, it seems to be more inline with the actual distribution.
-            For both Representatives and the Senators around half of the follows the President - in return, he only follows 2 profiles in our dataset.
+            For both Representatives and the Senators around half of them follows the president. In return, he only follows 2 profiles in the dataset.
           </p>
-          <h4 class="mt-5">The follow graph</h4>
+          <h4 class="mt-5">The Follow-Graph</h4>
           <p>
-            Below can the full follow graph for be seen. Note that edges have only been drawn if there is a link going in both direction between a node - as the edges would become to overwhelming. 
-            Furthermore only <i>Giant Connected Component</i> are displayed.
-            The interactive window allow for removing edges and nodes by clicking the legend to the right.
-            Furthermore hovering over node revial who the politicans is at a tool.
+            Below the comple follow-graph can be seen. Note that the edges have only been drawn if there exists a link going in both directions between a node. This is done since the edges would otherwise become to overwhelming. 
+            Furthermore, only the <i>Giant Connected Component</i> is displayed.
+            The interactive window allows for removing edges and nodes by clicking the legend to the right and hovering over the nodes revieval who the politicians are.
+
           </p>
           <div class="col-lg-12 text-center">
             <iframe src="plotly_files/follower_graph.html" width="100%" height="600"></iframe> 
           </div>
           <p>
-            As can be seen the network is super-dense! In the fact the <i>average shortage path lengh</i> is just 1.81. 
+            It can be seen that the network is super-dense! In fact the <i>average shortage path lengh</i> is just 1.81. 
             The number can be confirmed by examining the explainer-notebook.  
-            It only takes around two steps on average to get to another node from any node in graph.
+            It only takes around two steps on average to get to another node from any node in the graph.
           </p>
           <p>
-              The graph is so dense it contain a clique of 51 nodes - all Democrats. 
-              The seconds largest clique is 33 nodes consiting of only Republicans
+              The graph is so dense it contains a clique of 51 nodes - all Democrats. 
+              The second largest clique is of 33 nodes consisting of only Republicans.
           </p>
-          <h3 class="mt-5">In - and out degree</h3>
-          Based on the out and in degree fom the network it can be determined who follows the most other politicians and who has the most follows.
-          In the table below is it shown which 10 politicians have higest in - and out degree.
+          <h3 class="mt-5">In- and Out-Degree</h3>
+          Based on the in- and out-degree fom the network it can be determined who follows the most other politicians and who has the most follows.
+          In the table below is it shown which 10 politicians have the highest in- and out-degree.
           <table class="table">
             <thead>
               <tr>
@@ -270,7 +269,7 @@
             </tbody>
           </table>
           <p>
-            Considering the in-degree the top results are not surpring and it is probably some names that most people recognize.
+            Considering the in-degree the top results are not surprising and it is probably some names that most people recognize.
             Below is a decription of the top five:
           </p>
           <ol>
@@ -281,34 +280,32 @@
               <li>John Lewis served for 33 years in the House of Representatives untill his death in July of 2020 and has thought for civil rights and served in the leadership of the Democrats in the House.</li>
           </ol>
           <p>
-              The politians with highest out-degree are not as recognizable as before. 
-              However, but some slight info about the top 5 can be seen below
+              The politicians with highest out-degree are not as recognizable as before. Despite this, some slight information about the top 5 can be seen below:
           </p>
           <ol>
-            <li>Justin Amash is the only Libitarian in the data set where little bias towards either major party was found earlier.</li>
+            <li>Justin Amash is the only Libertarian in the dataset where little bias towards either major party was found earlier.</li>
             <li>Matt Cartwright represents the Democrats in the House of Representatives and has done so since 2013.</li>
             <li>Marc Pocan is also a Democrat who assumed office in the House of Representatives in 2013.</li>
             <li>Jared Golden is a US veteran and Democrat in the House of Representatives.</li>
             <li>Trent Kelly represents the Republicans in the House of Representatives.</li>
         </ol>
         <p>
-            So far we have only looked at the top 10 and the numbers of following as a function of total following. 
-            Below is  the in- and out degree distribution plotted histograms.
+            So far we have only looked at the top 10 politicians based on degrees and the numbers of following as a function of total following. 
+            Below is the in- and out-degree distribution plotted as histograms.
         </p>
         <div class="col-lg-12 text-center">
             <iframe src="plotly_files/degree_histogram.html" width="100%" height="600"></iframe> 
         </div>  
         <p>
-            Very interesting (notice the shared axis)! 
+            This figure is very interesting (notice the shared axis)! 
             It is clearly not the same distribution - the out-degree resembles as exponential distribution wheras the in-degree is more complicated.
-            The network is super-dense but where are no <i>hubs</i> as many nodes have many followers and follows many.
-            And almost all nodes seem to have at least a handfull of followers. 
+            The network is super-dense but there are no <i>hubs</i> as many nodes have many followers and follows many.
+            In addition, almost all nodes seem to have at least a handfull of followers. 
         </p>
         <h3 class="mt-5">Assortativity</h3>
         <p>
-            In the initial analysis of the edges, it was found how more likely politicians are to follow others from their own party compared to other parties. 
-            In this section the assortativity accross Parties, Type and State.
-            Below can a table be seen that sumarizes the result.
+            In the initial analysis of the edges, it was found how politicians are more likely to follow others from their own party compared to other parties. 
+            In this section the assortativity across Parties, Type and State is determined. The results are summarized in the table below.
         </p>
         <table class="table" style ="width: 30%; margin: auto;">
             <thead>
@@ -335,34 +332,33 @@
             </tbody>
         </table>
         <p>
-            The associativity of Nodes from same party is 0.81 - a very high measure.
-            But not surprising given the structure of the graph. 
-            It clearly tells that politicians from the same parties likes to link up.
+            The assortativity of nodes from same party is 0.81 - a very high measure.
+            But this is not surprising given the structure of the graph. 
+            It clearly tells that politicians from the same parties like to link up.
         </p>
         <p>    
-            From the plot of the graph it also looks like the senators are sepeareted from the representatives.
-            And it is confirmed with associativity of 0.58. 
-            Though it is lower than associativty accross parties it is still  a clear positive assortativity meaning that the politicians like to link up to other politicians of the same type.
+            From the plot of the graph it also looks like the senators are separated from the representatives. This can be confirmed from the assortativity of 0.58.
+            Eventhough it is lower than assortativity across parties it is still a clear positive assortativity meaning that the politicians like to link up to other politicians of the same type.
         </p>
         <p> 
-            Across polticians from the same State a much lower value, though postivte assortativity is found 0.065.
+            Across polticians from the same state a much lower assortativity value is found to be 0.065, so still positive.
             Off course there are also way more states, where many of them only have a few politician which off course makes it harder to find very high assortativity.
         </p>
         
         <h3 class="mt-5">Community Detection</h3>
         <p>
-          The last analysis that will be carried out on the graph is community detection and analysis.
-          First communities based on the data about the politicians will be investigated before looking at the Louvain method to create communities based on the actual links in the who-follow-who graph.
+          The last analysis that will be carried out on the graph is community detection.
+          First communities based on the data about the politicians will be investigated before looking at the Louvain method to create communities based on the actual links in the Who-follows-whom graph.
         </p>
       
-        <h5 class="mt-5">Communities based on party</h5>
+        <h5 class="mt-5">Communities Based On Party</h5>
         <p></p>
         The first natural split that will be investigated is based on parties. 
-        Recall that all but 3 node were either Democrat or Republican - namely the two independent politicians Bernie Sanders and Angus King as well as the liberiatarian politician Justin Amash.
-        Here it will be explored which of the two large parties they are likely to support.
+        Recall that all but three node were either Democrat or Republican - namely the two independent politicians Bernie Sanders and Angus King as well as the libertarian politician Justin Amash.
+        Here it will be explored which of the two large parties each politician is more likely to support.
         The approach to this analysis will be to see how these three politicians should be placed to obtain the highest modularity.
         Now, for the three last politicians there are (\2^3=8\)  combinations.  
-        Below are all 8 combinations seen aloung with the modularity.
+        Below are all eight combinations seen along with the modularity.
 
         <table class="table" style ="width: 75%; margin: auto;">
           <thead>
@@ -435,26 +431,26 @@
       </table>
 
         <p>
-          The numbers are naturally close to eachother as the 3 nodes that are changed only makes up 0.5% of the total nodes. 
-          The best partition is though still found where the Libretarian, Justin Amash, is with the repulicans while the two Independent Senators are with the Democrats.
-          The Independent Senators have in general been with the Democrats under Donald Trump's presidency and Bernie Sanders also ran in the Democratic primary presidential election, so he is especially not surprising to see as a Democrat. 
+          The numbers are naturally close to each other as the three nodes that are changed only makes up 0.5% of the total number of nodes. 
+          Despite this, the best partition is still found where the Libertarian, Justin Amash, is with the republicans while the two Independent senators are with the Democrats.
+          The Independent senators have in general been with the Democrats under Donald Trump's presidency and Bernie Sanders also ran in the Democratic primary presidential election, so he is especially not surprising to see as a Democrat. 
           In the ideal split the modularity based on the party split is 0.400.
         </p>
-        <h5 class="mt-5">Communities based on states</h5>
+        <h5 class="mt-5">Communities Based On States</h5>
         <p>
-          The next split will be based on state. 
-          The modularity obtained is 0.063 which is much wors that the party-split.
-           There are though also now 56 communities where some are very small why it can make sense to try to increase it by merging the states.
+          The next split is based on states. 
+          The modularity obtained is 0.063 which is much worse that the party-split.
+           Now there are 56 communities where some are very small which is why it make sense to try to increase it by merging the states.
         </p>
 
-        <h6 class="mt-5">Trying to merge states</h6>
+        <h6 class="mt-5">Trying To Merge States</h6>
         <p>
-          Now the states are merge with the Louvain algorithm.
-          This is done by first making a new a new weighted graph with 56 nodes - one corresponding to each state. 
+          The states are merged using the Louvain algorithm.
+          This is done by first making a new weighted graph with 56 nodes - one corresponding to each state. 
           The edges are now weighted where the weight between two states are given as the total number of links between politicians from these two states. 
           This forces the first iteration in the Louvain method to first merge on a state level.
-          Now treating the states as new nodes the algorithm can be used to find the best state parition.
-          The result in communties accross States are shown on the map interactive map below.
+          Now treating the states as new nodes the algorithm can be used to find the best state partition.
+          The resulting communities across states are shown on the interactive map below.
         </p>
         <div class="col-lg-12 text-center">
             <iframe src="plotly_files/Communities_States.html" width="100%" height="600"></iframe> 
@@ -470,52 +466,52 @@
         </ul>
         <p>
           This is a very interesting map if one follows US politics.
-          Community one seems to include many of usual Republican states through the central and south east America.
+          Community 1 seems to include many of usual Republican states through the central and South-East America.
           Community 1 on the other hand is primarily Democratic states in New England and at the west coast.
           Community 2 is also some usual Democratic states.
           Community 3-7 contains only one state and it is states that is usually more divided and considered swing states in the presidential election (Texas is still primarily Republican). 
           It is interesting that they are their own community here. 
-          Lastly community 7 is a bit harder to explain.
+          Lastly, community 7 is a bit harder to explain.
         </p>
         <p>
-          The modularity of the state communties are 0.134 higher than only considering one state but it is still much worse that the party split.
+          The modularity of the state communities are 0.134 higher than only considering one state but it is still much worse that the party split.
         </p>
-        <h5 class="mt-5">Communities based on Louvain Algorithm</h5>
+        <h5 class="mt-5">Communities Based On The Louvain Algorithm</h5>
         <p>
-            The best partition for communities are exstracted using the <i>Louvian algorithm</i>.
+            The best partition for communities are extracted using the <i>Louvian algorithm</i>.
             Upon convergence the algorithm find a total of 3 communities with modularity of 0.448.
-            It is not that much better than the obtained values in the party split which is an indication that the party split actually was not that bad. 
+            It is not that much better than the obtained values in the party split which is an indication that the party split wasn't actually that bad. 
             Let's gain a bit more knowledge of it by investigating who is in which community.
-            We will start of by looking at the types in the the communities.
+            We will start of by looking at the types in the communities.
         </p>
         <div class="col-lg-12 text-center">
             <iframe src="plotly_files/community_1.html" width="100%" height="600"></iframe> 
         </div>
         <p>
-          From this histogram it becomes quite apparent that one community contains - with a few errors - the senators in the data while the two others are almost only representatives and the president.
-          Let's do the sama but on the a party level:
+          From the aove histogram it becomes quite apparent that one community contains - with a few errors - the senators in the data while the two others are almost only representatives and the president.
+          Let's do the same but on a party level:
         </p>
         <div class="col-lg-12 text-center">
             <iframe src="plotly_files/community_2.html" width="100%" height="600"></iframe> 
         </div>
         <p>
-          So this tells that the two representative communities are perfectly split on a party level bar the Libertarian.
+          So this tells us that the two representative communities are perfectly split on a party level bar the Libertarian.
           Naturally the senator community includes both parties.
-          Let's end off by visualising the communities - they are plotted below in graph.
+          Let's end off by visualizing the communities - they are plotted in the graph below.
         </p>
         <div class="col-lg-12 text-center">
             <img src='figures/Follow_graph_partition.jpg', width=100%", style ="padding: 25px">
         </div>
         <p>
-          The graph is off course the same and the result makes sense based on the initial analysis of the communities.
+          The graph is of course the same and the result makes sense based on the initial analysis of the communities.
           It is really impressive how clean they are split based on party and type!
         </p>
         <h3 class="mt-5">Subconclusion</h3>
         <p>
-          In this part, a graph-based on what politicians follow each other has been created, visualized, and analyzed. 
+          In this part, a graph based on how politicians follow each other has been created, visualized, and analyzed. 
           The graph was very dense! Overall it was found that representatives very clearly followed others from their own party while the senators were more likely to follow other senators.
           A lot of different tools for analyzing networks were used and the conclusion can be summarized to the fact that politicians are by a clear margin more likely to follow others with the same beliefs as themselves - this includes a split between senators and representatives too. 
-          When using the Louvain method three communities were found that can be summarized as senators, Republican representatives, and Democratic representatives.
+          When using the Louvain method three communities were found, that can be summarized as senators, Republican representatives, and Democratic representatives.
         </p>
         <div class="col-lg-12 text-center">
             <br/><br/><br/>
