@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Social Graphs and Interactions</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Social Graphs and Interactions</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="data.html">Data</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="data_presentation.html">Data Presentation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="follow_graph.html">Follow Graph</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="text_analysis.html">Text Analysis</a>
+            <span class="sr-only">(current)</span>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Analysis of Retweets</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://nbviewer.jupyter.org/github/MikkelGroenning/social_graph/blob/main/Notebooks/Explainer_Notebook.ipynb">Explainer Notebook</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h1 class="mt-5">Tweet - Natural Language Processing</h1>
+        <p>
+          On the this page the result for our analysis of the 1.6 million tweet that was extracted from the American will be presented.
+        </p>
+
+        <h3 class="mt-5">TF-TR word clouds - from Communties</h3>
+        <p>
+            In this part TF-TR word clouds based on the tweets across the three communities will be created. 
+            Recall on the page <a href ="follow_graph.html">Follow Graph</a> three communities. Where communties could be described as 
+        </p>
+        <ol>
+            <li>(se) Roughly all Senators access all parties</li>
+            <li>(rr) Roughly all Repulican Representatives</li>
+            <li>(dr) Roughly all Democratic Representatives</li>
+        </ol>
+        <p>
+            The TF-TR model is the one made by Sune Lehmann for the course <a href ="https://kurser.dtu.dk/course/02805"> Social graphs and Interactions</a> in lecture week 7 in the course but it will in this part be expanded to handle three communities rather than two.
+            The modified TF-TR method will be utilized on all tweets posted by the three communities to create word-clouds that characterizes the three communities.
+            The modified TF-TR is used instead of the TF-IDF as there only will be three very long documents. 
+            Therefore many words are expected to be dropped due to their IDF being 0. 
+            For a longer discussion of TF-TR we refer our <a href="https://nbviewer.jupyter.org/github/MikkelGroenning/social_graph/blob/main/Notebooks/Explainer_Notebook.ipynb">Explainer Notebook </a> and <a href="https://nbviewer.jupyter.org/github/MikkelGroenning/social_graph/blob/main/Assignment2/Assignment2.ipynb">Assignment 2</a>.
+            For the three communities, the TR for a term \(t\) with term frequency \(TF_t^{(c)}\), where community \(c \in \{se, rr, dr\}\) is defined as: 
+
+            $$w_t^{(se)} = \frac{TF_t^{(se)}}{TF_t^{(rr)}+TF_t^{(dr)}+k}, \quad w_t^{(rr)} = \frac{TF_t^{(rr)}}{TF_t^{(se)}+TF_t^{(dr)}+k}, \quad w_t^{(dr)} = \frac{TF_t^{(dr)}}{TF_t^{(rr)}+TF_t^{(se)}+k}$$
+
+            where \(k\) is a constant which ensures the avoidance of division by zero. It has in this case been set to 1000. This is due to the regualization needed due to the document lengths as there are more than one million tweets.
+            With this, a TF-TR list for each community can be created where the ranking of term \(t\) in community \(c\) is given by \(TF_t^{(c)} \times w_t^{(c)}\).
+            These lists will then be used for creating the so-called TF-TR word-clouds. 
+
+            Below can the resluting word cloud using the above described method for three communities be seen. 
+            The word clouds are colored based on their party color - i.e. the Republican cloud is red and the Democrat cloud is blue and the neutral green is used for the community of the Senators.
+        </p>
+        <div class="col-lg-12 text-center">
+            <img src='figures/wordcloud1.png', width=100%", style ="padding: 10px">
+        </div>
+        <p>
+            The senators like to mention elected Senators and their titles "sen", "senator". 
+            Moreover "nominee", and also "nomination", is quite significant - that is probably due to the fact that in Donald Trump's presidency, where we have data, two new supreme courts judges have been nominated (a third judge was nominated in the fall of 2020 but we only have tweet till May 2020) 
+            And the Senate has to approve those that the president nominees.
+            
+            The main word seen for the Republican representatives is "taxcutandjobsact". 
+            The reason it is in one word is probably due to it being a twitter hashtag.
+            It was a plan to lower the corporate tax in the US to secure more jobs. 
+            Following that theme the word "taxreform" is also seen.
+            Again, many names and states (congressional districts) are seen as well as "foxbusiness", which is a classic Republican news media. 
+            They also use "betteroffnow" which is probably due to the fact that there has been a Republican president so they feel that people are better off now.
+
+            Moving onto the Democrat representatives "forthepeople" jump to the eye which could have been a Democrat campaign.
+            Moreover "goptaxscam" is also seen which is probably how the Democrats feel about the Republican tax reform. 
+            "LGBTQ" is also seen as quite significant for the Democrats. "Immigrant" and "black" is also seen - the Democrats probably have a larger focus on these groups. 
+            Once again many names are also seen.
+        </p>
+        <h3 class="mt-5">TD-IDF on state level</h3>
+        <p>
+            Now TD-IDF is carried out a on state level to see if we can localize some keywords that congress memebers speak about on a state level. The idea is consider all tweets from politicians that represents a State as one document and tokenize the words. 
+            For a more in depth explination of the tf-idf we refer to our <a href="https://nbviewer.jupyter.org/github/MikkelGroenning/social_graph/blob/main/Notebooks/Explainer_Notebook.ipynb">Explainer Notebook </a> and <a href="https://nbviewer.jupyter.org/github/MikkelGroenning/social_graph/blob/main/Assignment2/Assignment2.ipynb">Assignment 2</a>.
+        
+            In the barplot can a quick overview over the number of tokens in each document corresponding to a state.
+        </p>
+        <div class="col-lg-12 text-center">
+            <iframe src="plotly_files/num_of_tokens.html" width="100%" height="600"></iframe> 
+        </div>
+        <p>
+            So from this it can be seen that the document lengths varies a lot.
+            The are only less than 10.000 tokens from American Samoa while ther are more than 5.000.000 from California.
+            If any analysis that makes comparison between states had to be carried out this would be important to keep in mind. 
+            It is though not the case for us so instead we leave it as an interesting fact.
+
+            Below can resulting word cloud for every state after performing TD-IDF on every documemt be seen.
+        </p>
+        <div class="col-lg-12 text-center">
+            <img src='figures/wordcloud2.png', width=100%", style ="padding: 10px">
+        </div>
+        <p>
+            In general, across all 55 states, their own state name, demonym, and some congressional districts are mentioned often. 
+            Some of the districts mentioned are some of those that are more fought for in elections so they are mentioned more.
+            Moreover, many names of politicians from those stats are seen. Some other interesting words to spot in the list:
+        </p>
+        <ul>
+            <li>In American Samoa "talofa" is very significant. It turns out that it is a greeting in Samoan.</li>
+            <li>In California, "Sonoma" is a county that is often hit hard by wildfires. This has clearly been mentioned a lot.</li>
+            <li>In New Hampshire "granite" is pretty much the most important word. New Hampshire is often called the Granite State due to its vast amount of granite quarries.</li>
+            <li>In Kentucky, "Bluegrass120" is very popular. After some research, it was term to describe all 120 district in Kentucky used by a campaign from Mitch McConnell who is a senator from Kentucky and house majority leader in the Senate.</li>
+            <li>In Oregon, todaysclimatefact pops up. When analyzing the politicians per state it was seen that Oregon is very Democratic - maybe some Democrats disagreeing with the climate change doubters.</li>
+        </ul>
+        <h3 class="mt-5">Dispersion plot</h3>
+        <p>
+            In this part of the text-analysis, a dispersion plot will be created to see how different words are used across the time period of almost 3 and a half years. 
+            Using some selected keywords it is possible to see when different words trend based on what the politicians tweet. 
+        </p>
+        <div class="col-lg-12 text-center">
+            <img src='figures/Dispersion.png', width=100%", style ="padding: 10px">
+        </div>
+        <p>
+            Some short key takeaways of the selected words:
+        </p>
+        <ul>
+            <li><i>Covid</i> starts getting relevant around the start of 2020 without any activity before. This is not surprising based on the fact that it was here it starting getting to the news where it only was in China.</li>
+            <li><i>Obamacare</i> has been a focus across the full period but especially it has been in focus at the start of Donald Trump's presidency where he wanted to repel it.</li>
+            <li><i>Biden</i> has grown much more into focus as election day came closer. It could be interesting if tweets were available up till the present day to see how it looked there. He has though been in focus since the summer of 2019 - they have long elections in the United States. </li>
+            <li><i>Climate</i> has been in heavy focus across the full period.</li>
+            <li><i>Amazon</i> which is both the rain forest in South America, but more important also the world's largest online retailer is also mentioned across the full period but it seems to be mentioned more frequently as there has been a larger focus on their work environment.</li>
+            <li>The <i>Schumer Shutdown</i> can also be located quite clearly in time using this method and it can be seen that it *trending* twice ' in late 2017 and 2018 - in the given time period.</li>
+            <li><i>Impeachment</i> has really 'gained traction' in the latter half of our time frame which must come from all possible cases against President Trump.</li>
+            <li><i>Nominee</i> is generally mentioned a lot across the time period but there are some spikes. On April 7, 2017 and October 6, 2018 new supreme court judges were nominated - on July 31, 2018 a previous judge retired. So it has in general been in the first half of our time period that it has been a relevant subject and graph also reveals that.</li>
+        </ul>
+        <h3 class="mt-5">Sentiment Analysis</h3>
+        <p>
+            Let's move onto a sentiment analysis of the tweets. The analysis will be centered around the three communities found previously. 
+            To carry out this analysis the sentiment scores used in class found <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0026752"> here </a> are also used for this analysis. 
+            Below can table be seen that summerizes how the, previously mentioned, three communities feel about the topics from the dispersion plot
+        </p>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col"> </th>
+                <th scope="col">Republican</th>
+                <th scope="col">Democrat</th>
+                <th scope="col">Independent</th>
+                <th scope="col">Libertarian</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Republican</th>
+                <td>29359</td>
+                <td>5768</td>
+                <td>74</td>
+                <td>139</td>
+              </tr>
+              <tr>
+                <th scope="row">Democrat</th>
+                <td>6819</td>
+                <td>40595</td>
+                <td>258</td>
+                <td>61</td>
+              </tr>
+              <tr>
+                <th scope="row">Independent</th>
+                <td>53</td>
+                <td>113</td>
+                <td>2</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <th scope="row">Libertarian</th>
+                <td>266</td>
+                <td>269</td>
+                <td>2</td>
+                <td>0</td>
+              </tr>
+            </tbody>
+        </table>
+        <p>
+            In general, it is seen sentiment scores for the community are slightly positive, and taking the average sentiment per community into account they seem even more neutral with values being fairly close to the average. 
+            Some of the interesting takeaways are highlighted below:
+        </p>
+        <ul>
+            <li>The community of primarily democratic representatives is more negative again <i>Obamacare</i> compared to the two other communities. A reason for this can be that talk about repelling it has been more relevant in the time frame that we use. </li>
+            <li>The Democrats and senators are more positive against Biden which is not surprising as he is - at the moment of writing - President-elect for the Democrats.</li>
+            <li>The Republicans are most negative against <i>impeachment</i> which is not surprising as it is expected that most tweets with impeachment are related to the impeachment against President Trump.</li>
+            <li>On the other hand, The Republicans are the most positive for <i>wall</i> and <i>nominee</i>. Wall is expected to refer to the wall that President Trump would build towards Mexico (which can be the reason they are also most positive for Mexico). Nominee is probably - as discussed - relating to the supreme court judges that Trump has nominated who are more towards to conservative side of the spectrum.</li>
+        </ul>
+
+        <h5 class="mt-5">How do the politician <i>talk</i> to eachother</h3>
+            <p>
+                On Twitter a person can take another with use add symbol "@".
+                The next analysis will focus on how positive the politicians are when tagging each other.
+                This will done be by looking at the sentiment in tweets where one politician tag another.
+                In the table below it be seen how the three commuties mention eachother. 
+            </p>
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col"> </th>
+                    <th scope="col">Republican</th>
+                    <th scope="col">Democrat</th>
+                    <th scope="col">Independent</th>
+                    <th scope="col">Libertarian</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Republican</th>
+                    <td>29359</td>
+                    <td>5768</td>
+                    <td>74</td>
+                    <td>139</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Democrat</th>
+                    <td>6819</td>
+                    <td>40595</td>
+                    <td>258</td>
+                    <td>61</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Independent</th>
+                    <td>53</td>
+                    <td>113</td>
+                    <td>2</td>
+                    <td>0</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Libertarian</th>
+                    <td>266</td>
+                    <td>269</td>
+                    <td>2</td>
+                    <td>0</td>
+                  </tr>
+                </tbody>
+            </table>
+            <p>
+                Interestingly the politicians are more positive here than their general average sentiment.
+                The Democrats and Republicans are fairly consistent with a slight preference towards their own party. 
+                Looking at the senators it is quite interesting to see that they are negative towards themselves compared to the representatives.
+                It is suspected that this can be due to the fact the senator community includes senators from both parties.
+                Therefore we will split this community into two - one with Republicans and one with the Democrats and the Independents and Libertarians.
+                The result is displayed in the table below
+            </p>
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col"> </th>
+                    <th scope="col">Republican</th>
+                    <th scope="col">Democrat</th>
+                    <th scope="col">Independent</th>
+                    <th scope="col">Libertarian</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Republican</th>
+                    <td>29359</td>
+                    <td>5768</td>
+                    <td>74</td>
+                    <td>139</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Democrat</th>
+                    <td>6819</td>
+                    <td>40595</td>
+                    <td>258</td>
+                    <td>61</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Independent</th>
+                    <td>53</td>
+                    <td>113</td>
+                    <td>2</td>
+                    <td>0</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Libertarian</th>
+                    <td>266</td>
+                    <td>269</td>
+                    <td>2</td>
+                    <td>0</td>
+                  </tr>
+                </tbody>
+            </table>
+            <p>
+                It is now seen that it is, in general, the Democratic senators that are very positive - and surprisingly it is especially towards the Republican Representatives.
+                The Republican senators are more comparable to the Republican representatives.
+                It can also be seen that the representatives are slightly more positive towards the senators from their own party.
+            </p>
+        <h3 class="mt-5">Subconclussion </h3>
+        <p>
+            In this part, various measures of natural language processing have been used to analyze the tweets taking a start in the communities found in the *Who-follow-who* graph.
+            First TF-TR was carried out on the full set of tweets across the three communities to find important words in the communities. The results were illustrated as word clouds.
+            Some of the words that were seen did make sense but in general, it was dominated by names. 
+            Afterwards, TF-IDF was carried out on a state level - leading to 55 *documents* - where word clouds again were used to illustrate the results. 
+            Some meaningful takeaways could be found even though names again were dominant.
+            We also created a lexical dispersion plot to see how the usage of some words varied in time where many of the results made sense thinking back on the last four years of American politics if one follows that.
+        </p>
+        <p>
+            The last analysis was focused on the sentiment of the tweets - again based on the communities. 
+            Here we investigated how the communities *felt* towards different words where small differences could be seen.
+            Lastly, it was also investigated how positive the politicians wrote when tagging each other. 
+            Interestingly Democratic senators were found of Republican representatives but besides that, the results were as expected - but the differences were fairly minor.
+        </p>
+    </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.slim.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
+</body>
+
+</html>
