@@ -58,23 +58,23 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-left">
-        <h1 class="mt-5">Tweet - Natural Language Processing</h1>
+        <h1 class="mt-5">Tweets - Natural Language Processing</h1>
         <p>
-          On the this page the result for our analysis of the 1.6 million tweet that was extracted from the American will be presented.
+          On the this page the results from our analysis of the 1.6 million tweets extracted from the politicians will be presented.
         </p>
 
-        <h3 class="mt-5"> TF-TR Analysis for the three Communities </h3>
+        <h3 class="mt-5"> TF-TR Analysis for The Three Communities </h3>
         <p>
-            In this part TF-TR word clouds based on the tweets across the three communities will be created. 
+            In this part TF-TR word-clouds based on the tweets across the three communities will be created. 
             Recall on the page <a href ="follow_graph.html">Follow Graph</a> three communities. Where communties could be described as 
         </p>
         <ol>
-            <li>(<b>SE</b>) Roughly all Senators access all parties</li>
-            <li>(<b>RR</b>) Roughly all Repulican Representatives</li>
-            <li>(<b>(DR</b>) Roughly all Democratic Representatives</li>
+            <li>(<b>SE</b>) Roughly all senators access all parties</li>
+            <li>(<b>RR</b>) Roughly all Repulican representatives</li>
+            <li>(<b>(DR</b>) Roughly all Democratic representatives</li>
         </ol>
         <p>
-            The TF-TR model is the one made by Sune Lehmann for the course <a href ="https://kurser.dtu.dk/course/02805"> Social graphs and Interactions</a> in lecture week 7 in the course but it will in this part be expanded to handle three communities rather than two.
+            The TF-TR model is the one made by Sune Lehmann for the course <a href ="https://kurser.dtu.dk/course/02805"> Social graphs and Interactions</a> in lecture week 7 but it will in this part be expanded to handle three communities rather than two.
             The modified TF-TR method will be utilized on all tweets posted by the three communities to create word-clouds that characterizes the three communities.
             The modified TF-TR is used instead of the TF-IDF as there only will be three very long documents. 
             Therefore many words are expected to be dropped due to their IDF being 0. 
@@ -87,14 +87,14 @@
             With this, a TF-TR list for each community can be created where the ranking of term \(t\) in community \(c\) is given by \(TF_t^{(c)} \times w_t^{(c)}\).
             These lists will then be used for creating the so-called TF-TR word-clouds. 
 
-            Below can the resluting word cloud using the above described method for three communities be seen. 
-            The word clouds are colored based on their party color - i.e. the Republican cloud is red and the Democrat cloud is blue and the neutral green is used for the community of the Senators.
+            Below the resulting word-clouds using the method described above, can be seen for the three communities. 
+            The word-clouds are colored based on their party color - i.e. the Republican cloud is red and the Democrat cloud is blue and the neutral green is used for the community of the senators.
         </p>
         <div class="col-lg-12 text-center">
             <img src='figures/wordcloud1.png', width=100%", style ="padding: 10px">
         </div>
         <p>
-            The senators like to mention elected Senators and their titles "sen", "senator". 
+            The senators like to mention elected senators and their titles "sen", "senator". 
             Moreover "nominee", and also "nomination", is quite significant - that is probably due to the fact that in Donald Trump's presidency, where we have data, two new supreme courts judges have been nominated (a third judge was nominated in the fall of 2020 but we only have tweet till May 2020) 
             And the Senate has to approve those that the president nominees.
             
@@ -112,21 +112,21 @@
         </p>
         <h3 class="mt-5">TD-IDF on state level</h3>
         <p>
-            Now TD-IDF is carried out a on state level to see if we can localize some keywords that congress memebers speak about on a state level. The idea is consider all tweets from politicians that represents a State as one document and tokenize the words. 
-            For a more in depth explination of the tf-idf we refer to our <a href="https://nbviewer.jupyter.org/github/MikkelGroenning/social_graph/blob/main/Notebooks/Explainer_Notebook.ipynb">Explainer Notebook </a> and <a href="https://nbviewer.jupyter.org/github/MikkelGroenning/social_graph/blob/main/Assignment2/Assignment2.ipynb">Assignment 2</a>.
+            Now TD-IDF is carried out a on state level to see if we can localize some keywords that congress members speak about on a state level. The idea is to consider all tweets from politicians that represents a state as one document and tokenize the words. 
+            For a more in depth explanation of the TF-IDF we refer to our <a href="https://nbviewer.jupyter.org/github/MikkelGroenning/social_graph/blob/main/Notebooks/Explainer_Notebook.ipynb">Explainer Notebook </a> and <a href="https://nbviewer.jupyter.org/github/MikkelGroenning/social_graph/blob/main/Assignment2/Assignment2.ipynb">Assignment 2</a>.
         
-            In the barplot can a quick overview over the number of tokens in each document corresponding to a state.
+            In the barplot a quick overview over the number of tokens in each document corresponding to a state can be seen.
         </p>
         <div class="col-lg-12 text-center">
             <iframe src="plotly_files/num_of_tokens.html" width="100%" height="600"></iframe> 
         </div>
         <p>
-            So from this it can be seen that the document lengths varies a lot.
-            The are only less than 10.000 tokens from American Samoa while ther are more than 5.000.000 from California.
+            From this it can be seen that the document lengths varies a lot.
+            The are only less than 10.000 tokens from American Samoa while there are more than 5.000.000 from California.
             If any analysis that makes comparison between states had to be carried out this would be important to keep in mind. 
-            It is though not the case for us so instead we leave it as an interesting fact.
+            This is not the case for this project so instead we will leave it as an interesting fact.
 
-            Below can resulting word cloud for every state after performing TD-IDF on every documemt be seen.
+            Below the resulting word-clouds for every state after performing TD-IDF on every documemt can be seen.
         </p>
         <div class="col-lg-12 text-center">
             <img src='figures/wordcloud2.png', width=100%", style ="padding: 10px">
@@ -145,7 +145,7 @@
         </ul>
         <h3 class="mt-5">Dispersion plot</h3>
         <p>
-            In this part of the text-analysis, a dispersion plot will be created to see how different words are used across the time period of almost 3 and a half years. 
+            In this part of the text-analysis, a dispersion plot will be created to see how different words are used across the time period of almost three and a half years. 
             Using some selected keywords it is possible to see when different words trend based on what the politicians tweet. 
         </p>
         <div class="col-lg-12 text-center">
@@ -192,10 +192,10 @@
             </tbody>
         </table>
         <p>
-            The scores are seen to be fairly close to eachother with values around close to 5.5. 
+            The scores are seen to be fairly close to each other with values around close to 5.5. 
             Here, it should be noted that a neutral score is 5, so that means that all three communities are slightly positive.
             It would be interesting to know how the communities feel about different topics.
-            Below can table be seen that summerizes how the, previously mentioned, three communities feel about the topics from the dispersion plot
+            Below a table summarizing how the, previously mentioned, three communities feel about the topics from the dispersion plot can be seen. 
         </p>
         <table class="table" style ="width: 75%; margin: auto;">
             <thead>
@@ -282,7 +282,7 @@
             </tbody>
         </table>
         <p>
-            In general, it is seen sentiment scores for the community are slightly positive, and taking the average sentiment per community into account they seem even more neutral with values being fairly close to the average. 
+            In general, it is seen that sentiment scores for the community are slightly positive, and taking the average sentiment per community into account they seem even more neutral with values being fairly close to the average. 
             Some of the interesting takeaways are highlighted below:
         </p>
         <ul>
@@ -292,12 +292,12 @@
             <li>On the other hand, The Republicans are the most positive for <i>wall</i> and <i>nominee</i>. Wall is expected to refer to the wall that President Trump would build towards Mexico (which can be the reason they are also most positive for Mexico). Nominee is probably - as discussed - relating to the supreme court judges that Trump has nominated who are more towards to conservative side of the spectrum.</li>
         </ul>
 
-        <h5 class="mt-5">How do the politician <i>talk</i> to eachother</h3>
+        <h5 class="mt-5">How Do The Politician <i>talk</i> to Each Other</h3>
             <p>
-                On Twitter a person can take another with use add symbol "@".
+                On Twitter a person can tag another using the add-symbol "@".
                 The next analysis will focus on how positive the politicians are when tagging each other.
-                This will done be by looking at the sentiment in tweets where one politician tag another.
-                In the table below it be seen how the three commuties mention eachother. 
+                This will be done by looking at the sentiment in tweets where one politician tag another.
+                In the table below it can be seen how the three commuties mention each other. 
             </p>
             <table class="table">
                 <thead>
@@ -333,7 +333,7 @@
                 Interestingly the politicians are more positive here than their general average sentiment.
                 The Democrats and Republicans are fairly consistent with a slight preference towards their own party. 
                 Looking at the senators it is quite interesting to see that they are negative towards themselves compared to the representatives.
-                It is suspected that this can be due to the fact the senator community includes senators from both parties.
+                It is suspected that this can be due to the fact that the senator community includes senators from both parties.
                 Therefore we will split this community into two - one with Republicans and one with the Democrats and the Independents and Libertarians.
                 The result is displayed in the table below
             </p>

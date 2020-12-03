@@ -62,62 +62,63 @@
         <h1 class="mt-5">Data Presentation</h1>
         <p>
           This page is devoted to give a brief overview of our results from our analysis based on data of tweets from American Politicans. 
-          If you haven't all ready famlized yourself with the data we urge check out the <a href="data.html">data</a> page prior to reading this page. 
+          If you haven't already familized yourself with the data we urge you to check out the <a href="data.html">data</a> page prior to reading this page to know what data is used. 
         </p>
         <p>
-          As this page only contains a subsets of the findings, the full analysis as well code that can re-produce the results can be seen in the <a href="https://nbviewer.jupyter.org/github/MikkelGroenning/social_graph/blob/main/Notebooks/Explainer_Notebook.ipynb">Explainer-Notebook</a>.
-          Feel free to checkout our <a href=https://github.com/MikkelGroenning/social_graph >Github reposortory</a> as well.
+          As this page only contains a subsets of the findings, the full analysis as well as the code for reproducing the results, can be found in <a href="https://nbviewer.jupyter.org/github/MikkelGroenning/social_graph/blob/main/Notebooks/Explainer_Notebook.ipynb">Explainer-Notebook</a>.
+          Feel free to checkout our <a href=https://github.com/MikkelGroenning/social_graph >Github repository</a> as well.
         </p>
         <h2 class="mt-5">Basic Statistics</h2>
         <p>
-          This section will briefily summerize the data used prior to any graph modelling. 
-          The section is composed of two parts. The first part will describe the number of polictians in the dataset and their assocaitions to parties as well as their assocaition to the state which they were elected from. 
-          The second section will briefily eloborate how the polictians use Twitter. That is the number of tweets they post and difference between amount of tweets per party.
+          This section will briefly summarize the data used for all graph modelling and is composed by two parts. The first part desribes the number of politicians in the dataset and their associations to parties as well as their association to the state which they were elected from. 
+          The second part briefly eloborates on how the politicians use Twitter, i.e. how many tweets each politician has made and the difference between the amount of tweets based on party.
         </p>
-        <h3 class="mt-5">Statitics of Polticians</h3>
-        <p>Below is party distribution plotted for the polticians in the data.</p>
+        <h3 class="mt-5">Statistics of Politicians</h3>
+        <p>Below, the party distribution plotted for the politicians in the data can be seen.</p>
         <div class="col-lg-12 text-center">
           <iframe src="plotly_files/tweet_barplot_parties.html" width="100%" height="600"></iframe> 
         </div>
-        <p>Here is American the two-party system is clearly seen - though there is room for two independents, Bernie Sanders and Angus King as well as one Libertarian Justin Amash.</p>
-        <p>Another interesting aggregation is based on the type (i.e. Representative, Senator, or President (POTUS)). Below are the numbers aggregated together with the party so the distribution can be shown.</p>
+        <p>The political system in America containing only two parties is clearly illustrated as well as two independents, Bernie Sanders and Angus King. One Libertarian, Justin Amash, is also present.</p>
+        <p>Another interesting aggregation is based on the types in the congress, i.e. Representative, Senator, or President (POTUS). Below are the numbers aggregated together with the party such that the distribution can be visualized.</p>
         <div class="col-lg-12 text-center">
           <iframe src="plotly_files/tweet_parties_2_barplot.html" width="100%" height="600"></iframe> 
         </div>
         <p>
-          Immediatly it becomes clear that representitatives clearly dominates the dataset with a total of 503 Representatives 244 repulicans and 259 Democrats.
-          Senators are only 111 while there naturally only is one President, Donald J. Trump. 
-          Between the 115th and 116th congress all 435 seats in the house of representitatives were up for election while only around a third of the 100 seats in the Senate were up for election. 
-          That means some where not re-elected and thus replaced by another candiate but they still appear in the dataset.
-          Moreover United States overseas territories also gets seats in the house of representitatives (though without voting power). With these reasons it makes sense that representitatives are so dominant.
-          Furthermore it explains why the total number of Senetors and Representives excessed 435 and 100 respectivly, which is number of seats in the House of Representatives and the Senate respectivly.
-          From the plot the stacked element also clearly illustrates two party system - Democrats and Repuliblicans domminate the political landscape but are fairly equal in terms of sizes.
+          Immediately, it becomes clear that the representatives dominate the dataset with a total of 503 people, hereby 244 are Repulicans and 259 are Democrats.
+          There are only 111 senator and naturally onle one president - Donald J. Trump.
         </p>
-        <p>Another interesting feature is the state representatation. Below are a stacked barplot shown for every state in the dataset describing the representation for every party.
-           There is a total 56 states. This is more than the 50 usual states that we hear about. 
-           This is because American Samoa, District of Columbia, Northern Mariana Islands, Puerto Rico and Virgin Islands also gets seats in the House of Representiatives.
-           They do not have voting power but they can participate in debates. These are marked with (*).
+        <p>
+          Between the 115th and 116th congress all 435 seats in the house of representatives were up for election while only around a third of the 100 seats in the Senate were up for election. 
+          That means some of them were not reelected and thus replaced by another candiate, still they are presented in the dataset.
+          Moreover, the United States overseas territories also get seats in the house of representatives (but without voting power). With these reasons it makes sense that the representatives are so dominant.
+          Furthermore, it explains why the total number of senators and representatives exceeds 435 and 100, which is number of seats in the House of Representatives and the Senate respectively.
+          From the plot the stacked elements also illustrates the two party system - Democrats and Republicans domminate the political landscape but are fairly equal in terms of sizes.
+        </p>
+        <p>Another interesting feature is the representation of the states. Below can be seen a stacked barplot for every state in the dataset describing the representation for every party.
+           There is a total 56 states which is more than the usual 50 states that we hear about. 
+           This is because American Samoa, District of Columbia, Northern Mariana Islands, Puerto Rico and Virgin Islands also get seats in the House of Representatives.
+           They do not have the power to vote but they can participate in debates. These are marked with (*).
         </p>
         <div class="col-lg-12 text-center">
           <iframe src="plotly_files/tweet_parties_3_barplot.html" width="100%" height="600"></iframe> 
         </div>
         
         <h3 class="mt-5">Statistics of Tweets from Politicans</h3>
-        <p>In this part the basic statistics of the exstracted tweets from the politicians will be presented.</p>
-        <p>Let's first look at the number of tweets based on the party and type states in the dataset.</p>
+        <p>In this part the basic statistics of the extracted tweets from the politicians will be presented.</p>
+        <p>Let's first have a look at the number of tweets based on the party and the type stated in the dataset.</p>
         <div class="col-lg-12 text-center">
           <iframe src="plotly_files/tweet_barplot.html" width="100%" height="600"></iframe> 
         </div>
         <p>
-          From the barplot, it can be seen that Democrats tweet much more than the Republicans colleges despite their proportion of profile is close to equal. Interesting is also seen that Senators tweet disproportionally more than their colleagues in the House of Representatives - particularly for the Republicans. Recall the 
+          From the barplot, it can be seen that Democrats tweet much more than the Republicans despite their proportion of profile is close to being equal. It is also tnteresting to see that Senators tweet disproportionally more than their colleagues in the House of Representatives - particularly for the Republicans. Recall that there are
         </p>
         <ul>
-          <li> 244 Republican Representatives</li>
-          <li> 259 Democratic Representatives</li>
-          <li> 60 Republican Senators</li>
+          <li> 244 Republican Representatives,</li>
+          <li> 259 Democratic Representatives,</li>
+          <li> 60 Republican Senators, and</li>
           <li> 51 Democratic Senators</li>
         </ul>
-        <p>Lets explore the distribution of number of tweets posted per politician. </p>
+        <p>Let's explore the distribution of the number of tweets posted per politician. </p>
         <div class="col-lg-12 text-center">
           <iframe src="plotly_files/tweet_distribution.html" width="100%" height="600"></iframe> 
         </div>
