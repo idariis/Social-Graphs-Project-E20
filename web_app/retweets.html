@@ -58,7 +58,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-left">
-        <h1 class="mt-5">Retweet analysis</h1>
+        <h1 class="mt-5">Retweet Analysis</h1>
         <p>
           On this page, we will look into how the politicians in our dataset retweet each other and the media.
         </p>
@@ -68,13 +68,13 @@
         </p>
         <p>
           Our hypothesis is that people and particular American politicians retweet others tweets that confirms their world view. 
-          By analyzing the way the politician's retweet we hope to reject or confirm this hypothesis.
+          By analyzing the way the politicians retweets we hope to reject or confirm this hypothesis.
           The analsys of retweets is s composed of two parts:
         </p>
         <ol>
           <li> The first part is devoted to how the politicians retweet each other internally.</li>
           <li>
-            The secoond part is devoted to how the politicians retweet the media. Here 16 prominent American new media Twitter profiles were chosen. 
+            The second part is devoted to how the politicians retweet the media. Here 16 prominent American new media Twitter profiles were chosen. 
             The relationship between politicians and media was modelled as a bipartiate graph. 
           </li>
         </ol>
@@ -84,14 +84,14 @@
             In this part, it will be investigated which American politicians retweet whom both inside and across parties.
             Thus the news media will not yet be considered. 
             The graph is created by considering who retweets whom. 
-            If person <i>a</i> retweet the tweet person <i>b</i> created a directed link pointing from <i>a</i> to <i>b</i> is created.
-            Furthermore, if there are multiple links the link will be weighted accordingly. Finally, only the <i>Giant Connected Compents are cosidered</i>.
+            If person <i>a</i> retweets the tweet made by person <i>b</i> a directed link pointing from <i>a</i> to <i>b</i> is created.
+            Furthermore, if there are multiple links the link will be weighted accordingly. Finally, only the <i>Giant Connected Component is considered</i>.
           </p>
-        <h5 class="mt-5">Correcting for "self-retweet"</h5> 
+        <h5 class="mt-5">Correcting for "self-retweets"</h5> 
           <p>
             It turns out a few politicians are very fond of retweeting themselves. 
-            That could be because they posted a prediction that turned out to be true or whatnot.
-            Below is a histogram available that shows the fraction of retweet that is tweet the politicians wrote themselves. 
+            This might be due to the fact that they have posted a prediction that turned out to be true or not.
+            Below is a histogram available that shows the fraction of retweets that the politicians wrote themselves. 
             As can be seen, most politicians only retweet themselves modestly, however, a few are particularly happy about the tweets they wrote themselves.
           </p>
         <div class="col-lg-12 text-center">
@@ -148,8 +148,8 @@
           <img src='figures/jim_cooper.png', width=50%", style ="padding: 25px">
         </div>
         <p>
-          Though the politicians, that retweet themselves a lot, seem to have a high retweet count, we do not think a retweet is earned if the retweet originates from the person's own tweets, as we want to explore how the politician re-tweet each other.
-          Thus, these intern retweets are substracted from the number of retweets received.
+          Though the politicians, that retweet themselves a lot, seem to have a high retweet count, we do not think a retweet is earned if the retweet originates from the person's own tweets, as we want to explore how the politician retweet each other.
+          Thus, these intern retweets are subtracted from the number of retweets received.
         </p>
         <h3 class="mt-5">Degree Distribution</h3>
         <p>
@@ -157,37 +157,37 @@
           Here the weighted degree distribution is considered. 
           That is if a politician has retweeted another politician e.g. 10 times the weight on the edge is 10 rather than 1 if a politician had only retweeted the other once. 
           It is a more fair measure to consider weighted degree distribution in this context.
-          Below is the in - and out-degree distribution plotted as a histogram as well as in a log-log scatterplot.
+          Below is the in- and out-degree distribution plotted as a histogram as well as in a log-log scatterplot.
         </p>
         <div class="col-lg-12 text-center">
           <iframe src="plotly_files/degree_distribution_1.html" width="100%" height="600"></iframe> 
           <iframe src="plotly_files/degree_distribution_2.html" width="100%" height="600"></iframe> 
         </div>
           <p>
-            This turned out be more interesting the <i>who-follow-whom</i>-graph.
-            From the two plots it apparent that in-degree is more skewed than the out-degree. 
-            However, looking at the log-log plot both the in and out-degree resembles a scale-free network.
+            This turned out be more interesting than the <i>Who-Follow-Whom</i>-graph.
+            From the two plots it is apparent that the in-degree distribution is more skewed than the out-degree distribution. 
+            However, looking at the log-log plot both the in- and out-degree resembles a scale-free network.
           </p>
-        <h5 class="mt-5">Power - Law distribution</h5>
+        <h5 class="mt-5">Power-Law Distribution</h5>
         <p>
-          To check the scale-free property a power-law distribution is fitted to the weighted in and out-degree distribution. 
-          This is done the with powerlaw package in python the result is:
+          To check the scale-free property a power-law distribution is fitted to the weighted in- and out-degree distributions. 
+          This is done with the power-law package in Python and gives the following result:
 
           $$ \gamma_\textrm{in-degree} = 2.99, \quad \gamma_\textrm{out-degree} = 2.43$$
 
-          Both the in - and out-degree distribution resample a Scale-free network as \(2 < \gamma < 3\) <a href = "http://networksciencebook.com/chapter/4"> [Network Science  1, chap 4.7]</a>.
-          In social networks, the node with a high degree is typically the most well know or popular nodes. 
-          Below can the nodes with 10 largest in-degree and 10 largest out-degree be seen in form of a barplot.
+          Both the in- and out-degree distributions resample a Scale-free network as \(2 < \gamma < 3\) <a href = "http://networksciencebook.com/chapter/4"> [Network Science  1, chap 4.7]</a>.
+          In social networks, the node with a high degree is typically the most well-known or popular node. 
+          Below the nodes with the 10 largest in-degree and the 10 largest out-degree can be seen in form of a barplot.
         </p>
         <div class="col-lg-12 text-center">
           <iframe src='plotly_files/degree_distribution_3.html', width="100%" height="600"></iframe> 
         </div>
           <p>
             Some of the politicians have we already encountered in other analyses of the Twitter network.
-            To put the record straight we will briefly elaborate on who top five in both in and degree are:
+            To put the record straight we will briefly elaborate on who the top five in both in- and out-degree are:
           </p>
           <p>
-            <b>In degree top 5</b>
+            <b>In-degree top 5</b>
             <ol>
               <li>Donald J. Trump: Current Republican President </li>
               <li>Kevin McCarthy: Currently serving as Republican House Minority Leader (before 2018 he was Majority Leader)</li>
@@ -197,7 +197,7 @@
             </ol>
           </p>
           <p>
-            <b>Out degree top 5</b>
+            <b>Out-degree top 5</b>
             <ol>
               <li>Don Beyer: Democratic Representative</li>
               <li>Dwight Evans: Democratic Representative</li>
@@ -207,30 +207,30 @@
             </ol>
           </p>
           <p>
-            In general, the politicians with the highest in-degree have particular important jobs in United States Congress - with exception of Adam Schiff which we could not find any particular positions for - he however seems to be very active on Twitter and popular politician in general. The in-degree confirms the idea of social hubs. The politicians with the highest in-degree are indeed important/popular American politicians. 
-            The politicians with the highest out-degree can be explained by high Twitter activity for Kevin McCarthy and Nancy Pelosi. But for the first three, it could be because they tend to re-tweet more in general. 
+            In general, the politicians with the highest in-degree have particular important jobs in United States Congress - with exception of Adam Schiff which we could not find any particular positions for - he, however, seems to be very active on Twitter and a popular politician in general. The in-degree confirms the idea of social hubs. The politicians with the highest in-degree are indeed important/popular American politicians. 
+            The politicians with the highest out-degree can be explained by high Twitter activity for Kevin McCarthy and Nancy Pelosi. But for the first three, it could be because they tend to retweet more in general. 
             This has not been investigated further.
           </p>
-        <h3 class="mt-5"> The graph</h3>
+        <h3 class="mt-5"> The Graph</h3>
         <p>
-          Below can the re-tweet graph be seen.
-          Unfortunately it was infeasible to show the directed graph thus the graph is plotted undirected.  
-          Furthermore it turned out to  extremely cumbersometo make edges wider accordingly to their weight. 
-          Insted the node size reflect the in-degree. 
+          Below the retweet graph can be seen.
+          Unfortunately it was infeasible to show the directed graph thus, the graph is plotted as undirected.  
+          Furthermore it turned out to be extremely cumbersome to make edges wider according to their weight. 
+          Instead the node size reflects the in-degree. 
           This highlights popular politicians.
-          The graph almost resembles the graph shown in the notebook with the  <i>who-follow-whom</i>-graph.
+          The graph almost resembles the graph shown in the notebook with the  <i>Who-Follow-Whom</i>-graph.
           Again there appears to be a Democratic and Republican cluster. 
-          Furthermore, the Senators are still more connected to other Senators.
-          Interestingly Donald Trump - the POTUS - has moved to the center of the Republican party - where he in the <i>who-follow-whom</i>-graph was not so integrated. 
+          Furthermore, the senators are still more connected to other senators.
+          Interestingly Donald Trump - POTUS - has moved to the center of the Republican party where he in the <i>Who-Follow-Whom</i>-graph was not so integrated. 
         </p>
         <div class="col-lg-12 text-center">
           <iframe src="plotly_files/retweet_graph.html" width="100%" height="600"></iframe> 
         </div>
         <h3>Edge Type Distribution</h3>
         <p>
-          Judging from the graph it appears as Republicans politicians mostly retweet Republicans the same goes for the democrats. 
+          Judging from the graph it appears that Republican politicians mostly retweet Republicans and the same goes for the Democrats. 
           In this section, we will discover how many retweets there in fact have been inside and across the two groups. 
-          In the table can it be seen how many retweets the politicians from the different parties make and what parties they retweets.
+          In the table it can be seen how many retweets the politicians from the different parties make and what parties they retweet.
         </p>
         <table class="table">
           <thead>
@@ -274,23 +274,23 @@
           </tbody>
         </table>
         <p>
-          This information from the table above is visualized for two large parties Republicans and Democrats in a barplot below:
+          This information from the table above is visualized for the two large parties - Republicans and Democrats - in a barplot below:
         </p>
         <div class="col-lg-12 text-center">
           <iframe src='plotly_files/retweet_distribution_edges.html', width="100%" height="600"></iframe> 
         </div>
         <p>
-          From the plot, it is apparent that Democrats re-tweets much more than republicans.
+          From the plot, it is apparent that Democrats retweets much more than Republicans.
           However, recall that they retweet more in general. Both parties primarily retweet the same party.
           As a fraction, the Republicans are more likely to retweet the Democratic politicians than the other way around.  
         </p>
-        <h1 class="mt-5">Retweets of media visualized as a Bipartite graph</h1>
+        <h1 class="mt-5">Retweets of Media Visualized as a Bipartite Graph</h1>
         <p>
-          Next, we will look into how politicians retweet the media's Twitter profile.
+          Next, we will look into how politicians retweet the media's Twitter profiles.
           This is done as a bipartite graph.
-          A bipartite graph is a network constructed by two disjoint sets where the nodes in the network are divided into these sets. 
-          Bipartite graphs are very useful when modeling relationships between two different classes.
-          In this analysis, we will focus on how the political polarization is expressed in retweets of the 16 largest media contained in data.
+          A bipartite graph is a network constructed by two disjoint sets where the nodes in the network are divided into these  twosets. 
+          Bipartite graphs are very useful when modelling relationships between two different classes.
+          In this analysis, we will focus on how the political polarization is expressed in retweets of the 16 large media contained in data.
           This means that the network is constituted by a set containing the media and a set containing the politicians.
           Each link in the network connects a media-node to a politician-node.
         </p>
@@ -317,11 +317,11 @@
         </p>
         <p>  
           Since we are interested in the relationship between media and politicians, we need to modify the adjacency matrix containing information about retweets.
-          This is done by forcing all weights between politicians and another politicians to zero while the weights between politicians and media are retained. 
+          This is done by forcing all weights between politicians and other politicians to zero while the weights between politicians and media are retained. 
         </p>
         <p>
           The next step is to visualize the network as a bipartite graph. 
-          As for the 'Who-Retweets-Whom'-graph, a simple graph is created based on the adjacency matrix where the nodes are labeled using the names. 
+          As for the <i>Who-Follow-Whom</i>-graph, a simple graph is created based on the adjacency matrix where the nodes are labeled using the names. 
           To get an overview of the retweets, the simple graph is visualized below
         </p>
         <div class="col-lg-12 text-center">
@@ -329,7 +329,7 @@
         </div>
         <p>
           From the visualization it can be seen that in the periphery are the politicians that have not retweeted any media. 
-          Thus, the interesting part of the graph is the giant connected component and the remaining nodes will be ignored.
+          Thus, the interesting part of the graph is the Giant Connected Component (GCC) and the remaining nodes will be ignored.
         </p>
         <p>
           Since the GCC is connected, we can create the two sets for the bipartite graph. 
@@ -346,18 +346,18 @@
         </p>
         <p>
           Another important feature for the graph is the color of the nodes.
-          The same colors used in the 'Who-Follows-Whom' graph are used. 
-          Furthermore the media nodes are colored based the fraction of democratic links.
+          The same colors used in the <i>Who-Follow-Whom</i>-graph graph are used. 
+          Furthermore, the media nodes are colored based on the fraction of democratic links.
           A custom color scale will be defined going from red to blue over purple as the fraction goes from 0 to 1. 
-          Here we *ignore* the very few Liberatarian and Independents in this color scale and as such we do make an assumption that they are Republican in regards to the coloring as we only look at the Democratic factor. 
-          As there are so few nodes of Liberatarian and Independents it is seemed as insignificant compared to the fact that the variable node coloring is quite cool.
+          Here we *ignore* the very few Libertarians and Independents in this color scale and as such we do make an assumption that they are Republican in regards to the coloring as we only look at the Democratic factor. 
+          As there are so few nodes of Libertarians and Independents it is seemed as insignificant compared to the fact that the variable node coloring is quite cool.
         </p>
         <p>
           The bipartite graph is drawn such that the nodes from the two sets, Politicians and Media, are created firstly with the correct positions and colors.
           Thereafter, the links are added where the width is determined by \(\frac{1}{10} \cdot w\), where \(w\) is the weight from the adjacency matrix. 
         </p>
         <p>
-          The result of above considerations are shown below. We think result turned out pretty well.
+          The result of above considerations are shown below. We think the result turned out pretty well.
         </p>
         <div class="col-lg-12 text-center">
           <img src='figures/bipartiate_graph.png', width=100%", style ="padding: 10px">
@@ -376,7 +376,7 @@
         <p>
           Overall, the bipartite graph clearly shows that the media form part of the political polarization which supports our overall problem. 
         </p>
-        <h3 class="mt-5">Statistics on the Bipartite Graph</h3>
+        <h3 class="mt-5">Statistics on The Bipartite Graph</h3>
         <p>
           With the bipartite graph it is interesting to investigate statistics such as the distribution of links to each media and also if there exist a so-called butterfly pattern in the graph.
           I.e. is there a tendency for politicians from the same party to retweet the same media.
@@ -443,7 +443,7 @@
           Here a large variety of numbers are seen. 
           Some of the classic large American news media scores high here which fits well with formula - they are way more connected.
         </p>
-        <h1 class="mt-5">Sub conclussion</h1>
+        <h1 class="mt-5">Subconclusion</h1>
         <p>
           In this notebook, we have looked at how the politicians retweet each other and how they retweet the media.
           The retweet between the politicians highlighted that some are very fond of re-tweeting themselves, however, this has been corrected. 
