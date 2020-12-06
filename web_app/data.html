@@ -35,7 +35,7 @@
             <a class="nav-link" href="data.html">Data</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="data_presentation.html">Data Presentation</a>
+            <a class="nav-link" href="data_presentation.html">Basic Statistics</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="follow_graph.html">Follow Graph</a>
@@ -66,51 +66,104 @@
         <p>   
             We found two sources that containing open tweet-id's related to our project, and another source that stored the full length of the tweets made by Donald Trump. The three sources are listed below:
         </p>
-     </div>
-    <div class="col-lg-12 text-left">
         <b> 115th U.S. Congress Tweet Ids </b> <br>
-        A open dataset with 2,041,399 tweets from the Twitter accounts of members of the 115th U.S. Congress collected in the period of January 27, 2017 and January 2, 2019. The dataset consists of two files of interest -  namely
-        <ul>
-            <li> senators-1.txt: that contains tweet ids for Seneators</li>
-            <li>representatives-1.txt: that contains tweet ids for Representatives</li>
-        </ul>
-        <i>Littman, Justin, 2017, "115th U.S. Congress Tweet Ids, <a href='https://doi.org/10.7910/DVN/UIVHQR'>https://doi.org/10.7910/DVN/UIVHQR</a>, Harvard Dataverse, V5.</i>
-        <br/><br/>
-    </div>
-   
-    <div class="col-lg-12 text-left">
-        <b> 116th U.S. Congress Tweet Ids </b> <br>
-        A open dataset with 2,817,747 tweets from the Twitter accounts of members of the 116th U.S. Congress collected in the period of January 27, 2019 and May 7, 2020.  The dataset consists of two files of interest - namely
-        <ul>
-            <li> Senators: congress116-senate-ids.txt` that contains tweet ids for Seneatorss</li>
-            <li>Representatives: congress116-house-ids.txt` that contains tweet ids for Representatives</li>
-        </ul>
-        <i>Wrubel, Laura; Kerchner, Daniel, 2020, "116th U.S. Congress Tweet Ids, <a href='https://doi.org/10.7910/DVN/MBOJNS'>https://doi.org/10.7910/DVN/MBOJNS</a>, Harvard Dataverse, V5.</i>
-        <br/><br/>
-    </div>
+        <p>
+          A open dataset with 2,041,399 tweets from the Twitter accounts of members of the 115th U.S. Congress collected in the period of January 27, 2017 and January 2, 2019. The dataset consists of two files of interest -  namely
+          <ul>
+              <li>senators-1.txt: that contains tweet ids for Seneators</li>
+              <li>representatives-1.txt: that contains tweet ids for Representatives</li>
+          </ul>
+          <i>Littman, Justin, 2017, "115th U.S. Congress Tweet Ids, <a href='https://doi.org/10.7910/DVN/UIVHQR'>https://doi.org/10.7910/DVN/UIVHQR</a>, Harvard Dataverse, V5.</i>
+        </p>
+        <p>
+          <b> 116th U.S. Congress Tweet Ids </b> <br>
+          A open dataset with 2,817,747 tweets from the Twitter accounts of members of the 116th U.S. Congress collected in the period of January 27, 2019 and May 7, 2020.  The dataset consists of two files of interest - namely
+          <ul>
+              <li> Senators: congress116-senate-ids.txt` that contains tweet ids for Seneatorss</li>
+              <li>Representatives: congress116-house-ids.txt` that contains tweet ids for Representatives</li>
+          </ul>
+          <i>Wrubel, Laura; Kerchner, Daniel, 2020, "116th U.S. Congress Tweet Ids, <a href='https://doi.org/10.7910/DVN/MBOJNS'>https://doi.org/10.7910/DVN/MBOJNS</a>, Harvard Dataverse, V5.</i>
+        </p>
+        <p>
+          <b> Trump Twitter Archive </b> <br>
+          A site dedicated to scrape every single tweet from Donald J. Trump. Here we downloaded all tweets in the periods of January 27, 2017 and January 2, 2019 and January 27, 2019 and May 7, 2020.
+          <a href='https://www.thetrumparchive.com/'> Trump Twitter Archive </a>
+        </p>
 
-    <div class="col-lg-12 text-left">
-        <b> Trump Twitter Archive </b> <br>
-        A site dedicated to scrape every single tweet from Donald J. Trump. Here we downloaded all tweets in the periods of January 27, 2017 and January 2, 2019 and January 27, 2019 and May 7, 2020.
-        <a href='https://www.thetrumparchive.com/'> Trump Twitter Archive </a>
-        <br/> <br/>
-    </div>
-    <div class="col-lg-12 text-left">
-        <h2 class="mt-5">How to Recreate Data</h2>
-        As we per Twitter's Terms of Service can't distribute full length tweets we naturally can't share the data we have performed our analysis on.
-        However, we have created a Jupyter-Notebook that elaborates on how the data set can be recreated in details. The notebook can be viewed online by clicking the Jupyter logo below. 
-    </div>
-    <div class="col-lg-12 text-center">
-        <a href = 'https://nbviewer.jupyter.org/github/MikkelGroenning/social_graph/blob/main/Notebooks/Exstract_And_Clean_data.ipynb'>
-            <img alt="Qries" src='figures/Jupyter_logo.png', width=150">
-        </a>    
-    </div>
-    <div class="col-lg-12 text-center">
-        <br><br><br><br>
-    </div>
+        <p>
+          Examing the Harvard Dataverse we discovered that polticians in congress can have number of profiles for instance a private profile, a profile associated with work in congress and campaign profile.
+          Unfortunally the data also contains a large number of random profiles.
+          Furthermore it was not listed what party the account where associated with.
+          To combat this we found a list of congress memebers with their party association, whether they act as Senator or Represenative and, most important for the project, their twitter profile (if they have an account the vast majority has).
+          That meant rather than dealing with multiple accounts for the same congress member or including random account we would only consider one account per congress member.
+          Two different sources for the 115 and 116 congress have been utilized for this namely
+          <ul>
+            <li><b>115 Congress twitter info </b>: (PDF) <a class="link" href="https://www.sciencecoalition.org/wp-content/uploads/2018/09/115th-Congress-Twitter-Handles.pdf">https://www.sciencecoalition.org/wp-content/uploads/2018/09/115th-Congress-Twitter-Handles.pdf</a></li>
+            <li><b>116 Congress twitter info</b>: (Website) <a class="link" href="https://triagecancer.org/congressional-social-media">https://triagecancer.org/congressional-social-media</a>
+            </li>
+          </ul>
+        </p>
+
+        <h3 class="mt-5">How to Recreate Data</h3>
+        <p>
+          As we per Twitter's Terms of Service can't distribute full length tweets we naturally can't share the data we have performed our analysis on.
+          However, we have created a Jupyter-Notebook that elaborates on how the data set can be recreated in details. 
+          The notebook can found in our GitHub repository with name <tt>Exstract_And_Clean_data.ipynb</tt> or be viewed online by clicking the Jupyter logo below. 
+        </p>
+        <div class="col-lg-12 text-center">
+          <a href = 'https://nbviewer.jupyter.org/github/MikkelGroenning/social_graph/blob/main/Notebooks/Exstract_And_Clean_data.ipynb'>
+              <img alt="Qries" src='figures/Jupyter_logo.png', width=250" style ="padding: 25px">
+          </a>    
+        </div>
     </div>
   </div>
+</div>
 
+    <!-- Footer -->
+    <footer class="navbar navbar-expand-lg navbar-dark bg-dark static-bottom">
+
+      <!-- Footer Text -->
+      <div class="container">
+  
+        <!-- Grid row -->
+        <div class="navbar">
+  
+          <!-- Grid column -->
+          <div class="col-md-6 mt-md-0 mt-3">
+  
+            <!-- Content -->
+            <h5 class="text-white">Authors & Contact</h5>
+            <p class = "text-white">
+              The project is created by Ida Riis Jensen <a href="mailto:s161777@student.dtu.dk"> s161777@student.dtu.dk </a>, 
+              Toke Bøgelund-Andersen  <a href="mailto:s164202@student.dtu.dk"> s164202@student.dtu.dk </a>, and Mikkel Grønning <a href="mailto:s144968@student.dtu.dk">s144968@student.dtu.dk</a>.
+            </p>
+  
+          </div>
+          <!-- Grid column -->
+  
+          <hr class="clearfix w-100 d-md-none pb-3">
+  
+          <!-- Grid column -->
+          <div class="col-md-6 mb-md-0 mb-3">
+  
+            <!-- Content -->
+            <h5 class="text-white">About</h5>
+            <p class = "text-white">
+              This website was built for the final project in the course 02805 Social Graphs and Interactions at the Technical University of Denmark.
+              The entire code base is available at <a href="https://github.com/MikkelGroenning/02805_social_graphs">Github repository </a>.
+            </p>
+  
+          </div>
+          <!-- Grid column -->
+  
+        </div>
+        <!-- Grid row -->
+  
+      </div>
+      <!-- Footer Text -->
+  
+    </footer>
+    <!-- Footer -->
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.slim.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
