@@ -1,18 +1,10 @@
 from setuptools import find_packages, setup
 
 setup(
-    name='src',
+    name="src",
     packages=find_packages(),
-    version='0.1.0',
-    description='TEST_ENVIROMENT',
-    author='Mikkel Grønning',
-    license='MIT',
+    version="0.1.0",
+    description="Social_graph project",
+    author="Ida Riis Jensen s161777@student.dtu.dk , Toke Bøgelund-Andersen s164202@student.dtu.dk , and Mikkel Grønning s144968@student.dtu.dk.",
+    license="MIT",
 )
-
-
-some_dict = {
-"user" : "marco", "address" : "some street"
-,
- "age" : 28
- 
- }
