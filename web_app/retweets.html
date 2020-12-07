@@ -88,13 +88,13 @@
             In this part, it will be investigated which American politicians retweet whom both inside and across parties.
             Thus the news media will not yet be considered. 
             The graph is created by considering who retweets whom. 
-            If person <i>a</i> retweets the tweet made by person <i>b</i> a directed link pointing from <i>a</i> to <i>b</i> is created.
-            Furthermore, if there are multiple links the link will be weighted accordingly. Finally, only the <i>Giant Connected Component is considered</i>.
+            If politician A retweets the tweet made by politician B a directed link pointing from A to B is created.
+            Furthermore, if there are multiple retweets the links will be weighted accordingly. Finally, only the <i>Giant Connected Component is considered</i> that contains 590 nodes.
           </p>
         <h5 class="mt-5">Correcting for "self-retweets"</h5> 
           <p>
-            It turns out a few politicians are very fond of retweeting themselves. 
-            This might be due to the fact that they have posted a prediction that turned out to be true or not.
+            It turns out a good handfull of  politicians are very fond of retweeting themselves. 
+            This might be due to the fact that they have posted a prediction that turned out to be true or not or they really often thinks they tweeted something cleaver that the world should read again.
             Below is a histogram available that shows the fraction of retweets that the politicians wrote themselves. 
             As can be seen, most politicians only retweet themselves modestly, however, a few are particularly happy about the tweets they wrote themselves.
           </p>
@@ -103,15 +103,15 @@
         </div>
         <p>
           Listed below are the 5 politicians that retweet themself the most as a fraction of all their tweets.
-          Jim Cooper is the winner of retweeting himself with 91.2 % off all retweets being his own tweets.
+          Jim Cooper is the winner of retweeting himself with 91.8% off all retweets being his own tweets.
         </p>
         <table class="table" ">
            <thead>
              <tr>
                 <th scope="col">Name</th>
-                <th scope="col">retweets</th>
-                <th scope="col">to_self</th>
-                <th scope="col">fraction</th>
+                <th scope="col">Retweets</th>
+                <th scope="col">To self</th>
+                <th scope="col">Fraction</th>
             </tr> 
           </thead>
           <tbody>
@@ -119,31 +119,31 @@
               <th scope="row">Jim Cooper</th>
               <td>426</td>
               <td>391</td>
-              <td>0.917840</td>
+              <td>0.918</td>
             </tr>
             <tr>
               <th scope="row">Dina Titus</th>
               <td>427</td>
               <td>387</td>
-              <td>0.906323</td>
+              <td>0.906</td>
             </tr>
             <tr>
               <th scope="row">Steve Cohen</th>
                 <td>614</td>
                 <td>513</td>
-                <td>0.835505</td>
+                <td>0.836</td>
               </tr>
               <tr>
                 <th scope="row">Ami Bera</th>
                 <td>87</td>
                 <td>71</td>
-                <td>0.816092</td>
+                <td>0.816</td>
               </tr>
               <tr>
                 <th scope="row">Kyrsten Sinema</th>
                 <td>114</td>
                 <td>92</td>
-                <td>0.807018</td>
+                <td>0.807</td>
               </tr>
             </tbody>
           </table>
@@ -158,9 +158,9 @@
         <h3 class="mt-5">Degree Distribution</h3>
         <p>
           After removing the retweets of politicians that retweet themselves we will look into the degree distribution.
-          Here the weighted degree distribution is considered. 
+          Here, the weighted degree distribution is considered. 
           That is if a politician has retweeted another politician e.g. 10 times the weight on the edge is 10 rather than 1 if a politician had only retweeted the other once. 
-          It is a more fair measure to consider weighted degree distribution in this context.
+          It is a more fair measure to consider weighted degree distribution in this context as we expect one to be a <it>larger supporter</it> of someone they retweets more. Here, one could discuss if it also should be normalized in regards to how much a politician tweets but this has not be considered further.
           Below is the in- and out-degree distribution plotted as a histogram as well as in a log-log scatterplot.
         </p>
         <div class="col-lg-12 text-center">
@@ -168,7 +168,7 @@
           <iframe src="plotly_files/degree_distribution_2.html" width="100%" height="600"></iframe> 
         </div>
           <p>
-            This turned out be more interesting than the <i>Who-Follow-Whom</i>-graph.
+            This turned out be more interesting than the <i>Who-Follow-Whom</i>-graph and thus also the log-log plots were considered.
             From the two plots it is apparent that the in-degree distribution is more skewed than the out-degree distribution. 
             However, looking at the log-log plot both the in- and out-degree resembles a scale-free network.
           </p>
@@ -218,8 +218,8 @@
         <h3 class="mt-5"> The Graph</h3>
         <p>
           Below the retweet graph can be seen.
-          Unfortunately it was infeasible to show the directed graph thus, the graph is plotted as undirected.  
-          Furthermore it turned out to be extremely cumbersome to make edges wider according to their weight. 
+          Unfortunately it was infeasible to show the directed graph thus, the graph is plotted as undirected where an edge between two nodes appear based on weakly connectivity.  
+          Furthermore it turned out to be extremely cumbersome to make edges wider according to their weight while keeping the interactability. 
           Instead the node size reflects the in-degree. 
           This highlights popular politicians.
           The graph almost resembles the graph shown in the notebook with the  <i>Who-Follow-Whom</i>-graph.
@@ -278,6 +278,7 @@
           </tbody>
         </table>
         <p>
+          The polarization seen under the who-follow-who graph is even stronger now with only few links leaving their own party.
           This information from the table above is visualized for the two large parties - Republicans and Democrats - in a barplot below:
         </p>
         <div class="col-lg-12 text-center">
@@ -411,7 +412,7 @@
           The Robins-Alexander bipartite clustering coefficient is calculated to 0.442.
         </p>
         <p>
-          From the coefficient, it can be interpreted that 44\% of the caterpillars become butterflies in our bipartite graph. 
+          From the coefficient, it can be interpreted that 44% of the caterpillars become butterflies in our bipartite graph. 
           As we only have one graph it is hard to put this number in comparison but it looks like there could be a tendency for politicians from the same party to retweet the same media.
         </p>
         <p>

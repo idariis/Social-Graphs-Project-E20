@@ -44,7 +44,7 @@
             <a class="nav-link" href="text_analysis.html">Text Analysis</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="re">Analysis of Retweets</a>
+            <a class="nav-link" href="retweets.html">Analysis of Retweets</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="https://nbviewer.jupyter.org/github/MikkelGroenning/social_graph/blob/main/Notebooks/Explainer_Notebook.ipynb">Explainer Notebook</a>
@@ -74,7 +74,7 @@
           The second part briefly eloborates on how the politicians use Twitter, i.e. how many tweets each politician has made and the difference between the amount of tweets based on party.
         </p>
         <h3 class="mt-5">Statistics of Politicians</h3>
-        <p>Below, the party distribution plotted for the politicians in the data can be seen.</p>
+        <p>Below, the party distribution plotted for the politicians in the data can be seen. Her it should be noted that this does not include all memebers of the 115<sup>th</sup> and 116<sup>th</sup> congress but it is limited to those who have a Twitter accounts.</p>
         <div class="col-lg-12 text-center">
           <iframe src="plotly_files/tweet_barplot_parties.html" width="100%" height="600"></iframe> 
         </div>
@@ -85,11 +85,11 @@
         </div>
         <p>
           Immediately, it becomes clear that the representatives dominate the dataset with a total of 503 people, hereby 244 are Repulicans and 259 are Democrats.
-          There are only 111 senator and naturally onle one president - Donald J. Trump.
+          There are only 111 senator and naturally only one president - Donald J. Trump.
         </p>
         <p>
           Between the 115th and 116th congress all 435 seats in the house of representatives were up for election while only around a third of the 100 seats in the Senate were up for election. 
-          That means some of them were not reelected and thus replaced by another candiate, still they are presented in the dataset.
+          That means some of them were not reelected and thus replaced by another candiate and as such they are still present in the dataset. After a brief investigation it was also found that only around a fourth of the seats in the House of Representative got new politicians between  the 115<sup>th</sup> and 116<sup>th</sup> congress.
           Moreover, the United States overseas territories also get seats in the house of representatives (but without voting power). With these reasons it makes sense that the representatives are so dominant.
           Furthermore, it explains why the total number of senators and representatives exceeds 435 and 100, which is number of seats in the House of Representatives and the Senate respectively.
           From the plot the stacked elements also illustrates the two party system - Democrats and Republicans domminate the political landscape but are fairly equal in terms of sizes.
@@ -97,7 +97,7 @@
         <p>Another interesting feature is the representation of the states. Below can be seen a stacked barplot for every state in the dataset describing the representation for every party.
            There is a total 56 states which is more than the usual 50 states that we hear about. 
            This is because American Samoa, District of Columbia, Northern Mariana Islands, Puerto Rico and Virgin Islands also get seats in the House of Representatives.
-           They do not have the power to vote but they can participate in debates. These are marked with (*).
+           As mentioned they do not have the power to vote but they can participate in debates and they are also on Twitter. These are marked with (*).
         </p>
         <div class="col-lg-12 text-center">
           <iframe src="plotly_files/tweet_parties_3_barplot.html" width="100%" height="600"></iframe> 
@@ -122,12 +122,12 @@
         <div class="col-lg-12 text-center">
           <iframe src="plotly_files/tweet_distribution.html" width="100%" height="600"></iframe> 
         </div>
-        <p>From the stacked historgram a skewed distribution is seen. Most politicans have tweeted less than 5000 times, but a few are super active on the platform. </p>
+        <p>From the stacked historgram a skewed distribution is seen. Most politicans have tweeted less than 5000 times, but a few are super active on the platform with the most active reaching 18.000 tweets. This is across roughly 40 months so quite active one can say. </p>
         
         <h3 class="mt-5">American News Media Twitter Accounts</h3>
         <p>
           In the <a class="link" href="data.html"> Data </a> tab we mentioned that 16 prominent American Twitter profiles will be considered in the <a class="link" href="retweets.html.html"> Retweet Analysis </a>.
-          In the table below can the selected medias and their information about their twitter-account be seen.
+          In the table below can the selected medias and their information about their twitter-account be seen. This data is manually created.
         </p>
         <table class="table">
           <thead>

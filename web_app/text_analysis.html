@@ -79,21 +79,20 @@
             <li>(<b>DR</b>) Roughly all Democratic representatives</li>
         </ol>
         <p>
-            The TF-TR model is the one made by Sune Lehmann for the course <a href ="https://kurser.dtu.dk/course/02805"> Social graphs and Interactions</a> in lecture week 7 but it will in this part be expanded to handle three communities rather than two.
+            The TF-TR model is the one made by Professor Sune Lehmann for the course <a href ="https://kurser.dtu.dk/course/02805"> Social graphs and Interactions</a> in lecture week 7 but in this part it will be expanded to handle three documents (communities) rather than two.
             The modified TF-TR method will be utilized on all tweets posted by the three communities to create word-clouds that characterizes the three communities.
-            The modified TF-TR is used instead of the TF-IDF as there only will be three very long documents. 
-            Therefore many words are expected to be dropped due to their IDF being 0. 
+            The modified TF-TR is used instead of the TF-IDF as there only will be three very long documents, and therefore many words are expected to be dropped due to their IDF being 0. 
             For a longer discussion of TF-TR we refer our <a href="https://nbviewer.jupyter.org/github/MikkelGroenning/social_graph/blob/main/Notebooks/Explainer_Notebook.ipynb">Explainer Notebook </a> and <a href="https://nbviewer.jupyter.org/github/MikkelGroenning/social_graph/blob/main/Assignment2/Assignment2.ipynb">Assignment 2</a>.
             For the three communities, the TR for a term \(t\) with term frequency \(TF_t^{(c)}\), where community \(c \in \{se, rr, dr\}\) is defined as: 
 
             $$w_t^{(se)} = \frac{TF_t^{(se)}}{TF_t^{(rr)}+TF_t^{(dr)}+k}, \quad w_t^{(rr)} = \frac{TF_t^{(rr)}}{TF_t^{(se)}+TF_t^{(dr)}+k}, \quad w_t^{(dr)} = \frac{TF_t^{(dr)}}{TF_t^{(rr)}+TF_t^{(se)}+k}$$
 
-            where \(k\) is a constant which ensures the avoidance of division by zero. It has in this case been set to 1000. This is due to the regualization needed due to the document lengths as there are more than one million tweets.
+            where \(k\) is a constant which ensures the avoidance of division by zero. It has in this case been set to 1000. This is due to the regualization needed due to the document lengths as there are - on average - more than half a million tweets per document.
             With this, a TF-TR list for each community can be created where the ranking of term \(t\) in community \(c\) is given by \(TF_t^{(c)} \times w_t^{(c)}\).
             These lists will then be used for creating the so-called TF-TR word-clouds. 
 
             Below the resulting word-clouds using the method described above, can be seen for the three communities. 
-            The word-clouds are colored based on their party color - i.e. the Republican cloud is red and the Democrat cloud is blue and the neutral green is used for the community of the senators.
+            The word-clouds are colored based on their party color - i.e. the Republican cloud is red and the Democrat cloud is blue while green is used for the community of the senators.
         </p>
         <div class="col-lg-12 text-center">
             <img src='figures/wordcloud1.png', width=100%", style ="padding: 10px">
@@ -128,8 +127,8 @@
         <p>
             From this it can be seen that the document lengths varies a lot.
             The are only less than 10.000 tokens from American Samoa while there are more than 5.000.000 from California.
-            If any analysis that makes comparison between states had to be carried out this would be important to keep in mind. 
-            This is not the case for this project so instead we will leave it as an interesting fact.
+            If any analysis that makes comparison between states had to be carried out this would be important to keep in mind when choosing the frequency measure. 
+            This is though not the case for this project so instead we will leave it as an interesting fact.
 
             Below the resulting word-clouds for every state after performing TD-IDF on every documemt can be seen.
         </p>
@@ -142,7 +141,7 @@
             Moreover, many names of politicians from those stats are seen. Some other interesting words to spot in the list:
         </p>
         <ul>
-            <li>In American Samoa "talofa" is very significant. It turns out that it is a greeting in Samoan.</li>
+            <li>In American Samoa "talofa" is very significant. It turns out that it is a greeting in native Samoan.</li>
             <li>In California, "Sonoma" is a county that is often hit hard by wildfires. This has clearly been mentioned a lot.</li>
             <li>In New Hampshire "granite" is pretty much the most important word. New Hampshire is often called the Granite State due to its vast amount of granite quarries.</li>
             <li>In Kentucky, "Bluegrass120" is very popular. After some research, it was term to describe all 120 district in Kentucky used by a campaign from Mitch McConnell who is a senator from Kentucky and house majority leader in the Senate.</li>
