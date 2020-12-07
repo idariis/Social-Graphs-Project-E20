@@ -6,6 +6,13 @@ This repository contains the work of Ida Riis Jensen s161777@student.dtu.dk , To
 The repository contains our solution to the first two assignment as well as the final project. 
 In the final project a website had to be created - the result can be seen at http://groenning.net/.
 
+Final project description
+--------------------
+The primary purpose of this repository is to host our work on the final project. 
+In the final project we looked into how tweets from american congress members as well as the american president could be modelled as a graph.
+The (Explainer Notebook)[https://github.com/MikkelGroenning/social_graph/tree/main/Notebooks] as well as the website http://groenning.net/ explains in greater details the purpose of the project.
+
+
 How to run the code
 --------------------
 An environment has been created to ensure the reproducibility of the data.
@@ -32,22 +39,19 @@ Directory Structure
     ├── LICENCE
     ├── environment.yml <- file with libraries and library versions for recreating the analysis
     ├
-    ├── Assignment1
-    │   └── Assignment1.ipynb   <- Solution to assignment 1
-    ├── Assignment2
-    │   ├── data                <- Folder with data utilized to notebook
-    │   └── Assignment2.ipynb   <- Solution to assignment 2
+    ├── Assignment1         <- Solution to assignment 1       
+    ├── Assignment2         <- Solution to assignment 2     
     ├── Data
-    │   ├── processed 	        <- data for final project after all preprocessing has been done
-    │   └── raw 		        <- original unmodified data or final project acting as source of truth and provenance
+    │   ├── processed       <- data for final project after all preprocessing has been done
+    │   └── raw 		    <- original unmodified data or final project acting as source of truth and provenance
     │
-    ├── notebooks 		        <- jupyter notebooks for analysis and explanation 
-    │   ├──
-    │   ├──
-    │   ├──
-    │   ├──
-    │   ├──
-    │   ├──
-    │
-    ├── models 			        <- compiled model describing the graphs 
-
+    ├── notebooks 		    <- jupyter notebooks for analysis and explanation 
+    ├── models 		        <- compiled model describing the graphs 
+    ├── figures             <- figures created for the final project
+    ├── src
+    │   ├── data            <- helpfull script to deal with the data
+    │   └── tools 		    <- tools for accessing the Twitter API
+    ├── web_app
+    │   ├── figures         <- figures used on the website
+    │   ├── plotly-files    <- interactives plots used on the website
+    │   └── Vendor          <- Exertnal CSS and JS script
