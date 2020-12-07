@@ -37,7 +37,7 @@ Directory Structure
     ├── README.md
     ├── setup.py
     ├── LICENCE
-    ├── environment.yml <- file with libraries and library versions for recreating the analysis
+    ├── environment.yml     <- file with libraries and library versions for recreating the analysis
     ├
     ├── Assignment1         <- Solution to assignment 1       
     ├── Assignment2         <- Solution to assignment 2     
