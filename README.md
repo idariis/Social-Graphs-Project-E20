@@ -1,7 +1,7 @@
 
 02805 Social graphs and interactions
 --------------------
-This repository contains the work of Ida Riis Jensen s161777@student.dtu.dk , Toke Bøgelund-Andersen s164202@student.dtu.dk, and Mikkel Grønning s144968@student.dtu.dk in the course (02805 Social graphs and interactions)[https://kurser.dtu.dk/course/02805] offered by the Technical University of Denmark.
+This repository contains the work of Ida Riis Jensen s161777@student.dtu.dk , Toke Bøgelund-Andersen s164202@student.dtu.dk, and Mikkel Grønning s144968@student.dtu.dk in the course [02805 Social graphs and interactions](https://kurser.dtu.dk/course/02805) offered by the Technical University of Denmark.
 
 The repository contains our solution to the first two assignment as well as the final project. 
 In the final project a website had to be created - the result can be seen at http://groenning.net/.
@@ -10,7 +10,7 @@ Final project description
 --------------------
 The primary purpose of this repository is to host our work on the final project. 
 In the final project we looked into how tweets from american congress members as well as the american president could be modelled as a graph.
-The (Explainer Notebook)[https://github.com/MikkelGroenning/social_graph/tree/main/Notebooks] as well as the website http://groenning.net/ explains in greater details the purpose of the project.
+The [Explainer Notebook](https://github.com/MikkelGroenning/social_graph/tree/main/Notebooks) as well as the website http://groenning.net/ explains in greater details the purpose of the project.
 
 
 How to run the code
