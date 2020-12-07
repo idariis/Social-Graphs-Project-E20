@@ -59,6 +59,11 @@
       <div class="col-lg-12 text-left">
         <h1 class="mt-5">Retweet Analysis</h1>
         <p>
+          <i>
+            More details on the <tt>Tweets - Natural Language Processing</tt>, and code to recreate the results can found at <a class="link" href="https://nbviewer.jupyter.org/github/MikkelGroenning/social_graph/blob/main/Notebooks/Make_Bipartite_Graph.ipynb">NB-viewer</a> or on our  <a class="link" href="https://github.com/MikkelGroenning/social_graph/blob/main/Notebooks/Make_Bipartite_Graph.ipynb">Github</a>.
+          </i>
+        </p>
+        <p>
           On this page, we will look into how the politicians in our dataset retweet each other and the media.
         </p>
         <p> 
@@ -348,7 +353,7 @@
           The same colors used in the <i>Who-Follow-Whom</i>-graph graph are used. 
           Furthermore, the media nodes are colored based on the fraction of democratic links.
           A custom color scale will be defined going from red to blue over purple as the fraction goes from 0 to 1. 
-          Here we *ignore* the very few Libertarians and Independents in this color scale and as such we do make an assumption that they are Republican in regards to the coloring as we only look at the Democratic factor. 
+          Here we <i>ignore</i> the very few Libertarians and Independents in this color scale and as such we do make an assumption that they are Republican in regards to the coloring as we only look at the Democratic factor. 
           As there are so few nodes of Libertarians and Independents it is seemed as insignificant compared to the fact that the variable node coloring is quite cool.
         </p>
         <p>
@@ -447,7 +452,7 @@
           In this notebook, we have looked at how the politicians retweet each other and how they retweet the media.
           The retweet between the politicians highlighted that some are very fond of re-tweeting themselves, however, this has been corrected. 
           Both the in and out-degree distribution resembles that of a scale-free network and particular the in-degree highlight the "popular/important" politicians in the dataset. 
-          Modeling the retweets as a graph much resembles the *who-follow-whom* the most important distinguishing fact between the two graphs is that Donald J. Trump becomes the center of the Republican party rather in the retweet graph.
+          Modeling the retweets as a graph much resembles the <i>who-follow-whom</i>-graph the most important distinguishing fact between the two graphs is that Donald J. Trump becomes the center of the Republican party rather in the retweet graph.
           Furthermore, it was found that politicians tend to retweet politicians from the same party.
           This aligns with our hypothesis that politicians tend to retweet people that they like - assuming they are more fond of people from their own party.           
         </p>
