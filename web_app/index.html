@@ -125,18 +125,85 @@
 
       <h1 class="mt-5"> Discussion </h1>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        The basis for much of the work carried out was in regard to the Twitter handles of the various politicians.
+        Errors or ambiguities in this would propagate out through the project and analyses.
+        Sadly these were apparent in the data used to get the Twitter handles.
+        One issue is due to the fact that politicians have multiple users and one user had to be picked.
+        An example is Mitch Mcconnell who has both @McConnellPress and @senatemajldr.
+        For the data that we used @McConnellPress is picked even though @senatemajldr might have been better.
+        This is a general case for many politicians who have a personal and campaign user.
+        Another issue in that regard is the fact that some close their campaign user after they leave the Congress. 
+        Multiple cases were found where handles from the 115th congress now were owned by someone who is not a politician.
+        We filtered the found ones out but some could have been missed. 
       </p>
-
+      <p>
+        The Harward data includes many random profiles that were not relevant for us. 
+        Here we were forced to use the found twitter handles as filters to only keep tweets from the corresponding politicians.
+        The reasons we had to use the external handles in the first place is due to the fact that the Harward data did not include the party of the tweeters and this was a central part of the project.
+      <p>  
+        After having built the original who-follow-whom graph a few errors in the parties were actually also found. 
+        They were found as they seemed to be misplaced compared to the other members of their party. 
+        This was investigated further and it was found that there were errors in the data (3 cases were found).
+        Of course it is not good that there are errors but on the other hand it was quite impressive that a graph drawn with ForceAtlas could find errors in the data!
+      </p>
+      <p>  
+        In the who-follow-whom graph the community detection was performed on the undirected graph.
+        It would been interesting to see how the results would have differed if similar methods for undirected graphs had been utilized.
+        Making the graph undirected some compromises had to  be made perhaps the choices here where not ideal - though results revealed some interesting pattens
+      </p>
+      <p> 
+        Our initial idea was to include the american new media to larger extend. 
+        But as the Twitter API only allow one to extract the latest 3200 tweets using only the profile name that was deemed infeasible. 
+        We could unfortunately not find a source that stored tweet ids for american new media.
+        It would properly have revealed how the media plays a rule in the hypotheses polarization. 
+      </p> 
+      <p>   
+        We think in particular it was interesting to see the interactive graphs of well Democrats were split from Republicans but also how well Representatives were split from Senators.
+        Our result aligns clear with our initial hypothesis that there exists political polarisation in the United States Congress.
+        Though it does not prove polarization in general our analysis shows that polarization exists to some degree in the way the politicians act on Twitter
+      </p>
+      <h3 class="mt-5">Future work</h3>
+      <p>
+        The full project has been made on only 40 months of data. 
+        It could be interesting to extend it back to Obama’s presidency where Twitter was much younger.
+        As such possible time dependent analyses could have been introduced to find other cool take-aways - are the polarization increasing?
+      </p>
+      <p>
+        As discussed above there were multiple errors in the data.
+        It might be worthwhile to invest the time to construct a dataset from the bottom where we as such also could account for multiple users from the same politician.
+      </p>
+      <p>
+        As the full group is very interesting in Machine Learning we also discussed that it could be quite cool to develop NLP-models to detect who tweets (both a type/party of personal level).
+      </p>
       <h1 class="mt-5"> Conclussion </h1>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        In this project, political polarization in the United States Congress has been investigated based on data from Twitter. 
+        The data has been analyzed through 3 different analyses.
+        Before any analysis could be carried out the data had to be obtained and processed where the data gathering was carried out using the Twitter API.
+        With the data gathered preprocessing also had to be carried out to get the data in the desired format to be used in the analysis.
+      </p>
+      <p>
+        In the first analysis, a graph-based on if politicians followed each other was created, visualized, and analyzed. 
+        A very clear pattern was obtained that separated the two major American parties. 
+        Moreover, segregation was also found between representatives and senators.
+        This split was so clear that when the Louvain method was used to find communities three communities were found that roughly were Senators, Republican Representatives, and Democratic Representatives.
+      </p>
+      <p>
+        The second analysis is based on natural language processing where multiple tools were used to analyze the actual tweets.
+        Word-clouds were created from the found communities as well as on a State level. 
+        In general, there were fairly limited numbers of interesting take-aways as the keywords often were their own names. 
+        A lexicographical dispersion plot was also created where one clearly could get an idea of when different words were <i>hot</i> in Congress.
+        Lastly, sentiment analysis was investigated to learn how the communities from part 1 <i>felt</i> towards different words as well as how they felt towards each other.
+      <p>
+        In the third analysis, two additional graphs were created based on retweets.
+        The first was only for politicians where it was found that some are very fond of re-tweeting themselves. 
+        Compared to the who-follow-whom graph it was found that the in- and out-degree much more resembled a scale-free network.
+        Another difference was that President Trump now was pretty much the center of the Republican Party.
+        Afterward 16 media accounts were introduced and a bipartite graph was created between media and politicians.
+        Here it was found there is a tendency for politicians from the same party to retweet the same media.
+      </p>
+      <p>
+        As this project is very large a great amount of effort has also been put into summarizing and visualizing the key results into a web-page.
       </p>
     </div>
   </div>
@@ -172,7 +239,7 @@
         <h5 class="text-white">About</h5>
         <p class = "text-white">
           This website was built for the final project in the course 02805 Social Graphs and Interactions at the Technical University of Denmark.
-          The entire code base is available at <a href="https://github.com/MikkelGroenning/02805_social_graphs">Github repository </a>.
+          The entire code base is available at <a href="https://github.com/MikkelGroenning/social_graph">Github repository </a>.
         </p>
 
       </div>
